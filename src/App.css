@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-0;
+  }
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-md border-b border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-yellow-400 via-violet-400 to-red-400 bg-clip-text text-transparent;
+  }
+
+  .floating-animation {
+    -webkit-animation: floating 6s ease-in-out infinite;
+            animation: floating 6s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    -webkit-animation: pulse-glow 2s ease-in-out infinite alternate;
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@-webkit-keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@-webkit-keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
+}
+
+.tech-icon {
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+}

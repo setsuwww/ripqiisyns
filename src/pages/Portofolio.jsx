@@ -85,7 +85,7 @@ const PortfolioPage = () => {
   return (
     <div className="relative min-h-screen pt-20 pb-16 overflow-hidden">
       {/* Grid Background */}
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div data-aos="zoom-in" data-aos-duration="1000" className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       {/* Floating Lights */}
       <div className="absolute inset-0 z-0">
@@ -104,10 +104,10 @@ const PortfolioPage = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1500">
             My <span className="gradient-text">Portfolio</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
             A collection of projects that showcase my skills and passion for creating amazing digital experiences.
           </p>
         </div>
@@ -115,10 +115,9 @@ const PortfolioPage = () => {
         {/* Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={`group relative glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-105`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+            <div key={project.id}
+              className={`group relative glass-effect rounded-2xl overflow-hidden `}
+              data-aos="fade-up" data-aos-duration={500 + index * 200}
             >
 
               {/* Image Section */}
@@ -126,7 +125,7 @@ const PortfolioPage = () => {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

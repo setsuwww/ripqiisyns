@@ -27,15 +27,9 @@ const AboutPage = () => {
     <div className="relative min-h-screen pt-20 pb-16">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl floating-animation" />
-        <div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl floating-animation"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-red-400/10 rounded-full blur-2xl floating-animation"
-          style={{ animationDelay: "4s" }}
-        />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl floating-animation" data-aos="zoom-out" data-aos-duration="1500" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl floating-animation" data-aos="zoom-out" data-aos-duration="1500" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-red-400/10 rounded-full blur-2xl floating-animation" data-aos="zoom-out" data-aos-duration="1500" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,11 +39,14 @@ const AboutPage = () => {
             <img
               src="/pp.jpg"
               alt="Rifqi Ibrahim"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
               className="w-20 h-20 object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500"
             />
-            <p>About <span className="gradient-text">Me</span></p>
+            <p data-aos="fade-left">About <span className="gradient-text">Me</span></p>
           </h1>
-          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-left">
             Get to know more about my journey, skills, and passion for creating amazing digital experiences.
           </p>
         </div>
@@ -58,7 +55,7 @@ const AboutPage = () => {
 
           {/* Right Column - Content Section */}
           <div className="space-y-6">
-            <div className="glass-effect rounded-2xl p-6">
+            <div className="glass-effect rounded-2xl p-6" data-aos="fade-left">
               <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4">Personal Info</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -94,7 +91,7 @@ const AboutPage = () => {
             </div>
 
             {/* Bio */}
-            <div className="glass-effect rounded-2xl p-6 md:p-8">
+            <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">
               <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4 md:mb-6">My Story</h3>
               <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
                 <p>
@@ -116,7 +113,7 @@ const AboutPage = () => {
             </div>
 
             {/* Experience */}
-            <div className="glass-effect rounded-2xl p-6 md:p-8">
+            <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">
               <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4 md:mb-6">Experience</h3>
               <div className="space-y-6">
                 {experiences.map((exp, index) => (

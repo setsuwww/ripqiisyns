@@ -35,10 +35,10 @@ const SkillsPage = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1500">
             My <span className="gradient-text">Skills</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-down" data-aos-duration="1500">
             A comprehensive overview of my technical skills and expertise across different domains of web development.
           </p>
         </div>
@@ -48,7 +48,8 @@ const SkillsPage = () => {
             <div
               key={skill.name}
               className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              data-aos="fade-down"
+              data-aos-duration={600 + index * 200}
             >
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
@@ -72,7 +73,7 @@ const SkillsPage = () => {
         {/* Additional Info */}
         <div className="mt-16 grid md:grid-cols-2 gap-8">
           {/* Learning */}
-          <div className="glass-effect rounded-2xl p-8">
+          <div className="glass-effect rounded-2xl p-8" data-aos="fade-down" data-aos-duration="1500">
             <h3 className="text-2xl font-bold gradient-text mb-6">Currently Learning</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -103,7 +104,7 @@ const SkillsPage = () => {
           </div>
 
           {/* Certifications */}
-          <div className="glass-effect rounded-2xl p-8">
+          <div className="glass-effect rounded-2xl p-8" data-aos="fade-down" data-aos-duration="1500">
             <h3 className="text-2xl font-bold gradient-text mb-6">Certifications</h3>
             <div className="space-y-4">
               <div className="border-l-2 border-yellow-400/30 pl-4">

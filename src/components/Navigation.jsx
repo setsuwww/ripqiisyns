@@ -53,9 +53,10 @@ const Navigation = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <a to="/" className="text-2xl font-bold gradient-text hover:scale-105 transition-transform">
-              Rifqi Synyster
-            </a>
+            <p className="flex items-center space-x-2 text-2xl font-bold">
+              <img src="/pp.jpg" alt="" className="size-10 object-cover lg:size-12 rounded-full" />
+              <span>Rifqi <span className="gradient-text">Synyster</span></span>
+            </p>
 
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => {
@@ -83,7 +84,7 @@ const Navigation = ({ children }) => {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div className="md:hidden absolute top-16 left-0 right-0 glass-effect border-t border-white/10">
+            <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-br-full">
               <div className="px-4 py-4 space-y-2">
                 {navItems.map((item) => {
                   const Icon = item.icon
@@ -92,9 +93,9 @@ const Navigation = ({ children }) => {
                       key={item.href}
                       to={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${location.pathname === item.href
-                        ? "text-yellow-400 bg-white/10"
-                        : "text-gray-500 hover:text-yellow-400 hover:bg-white/5"
+                      className={`w-1/2 flex items-center font-semibold space-x-2 px-4 py-3 transition-all duration-300 border-0 border-l-4 border-transparent rounded-r-full ${location.pathname === item.href
+                        ? "text-yellow-400"
+                        : "text-gray-500 hover:bg-yellow-100 hover:text-yellow-800 hover:border-yellow-400 cursor-pointer"
                         }`}
                     >
                       <Icon size={20} />

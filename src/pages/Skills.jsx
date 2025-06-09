@@ -43,7 +43,7 @@ const SkillsPage = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {skills[activeCategory]?.map((skill, index) => (
             <div
               key={skill.name}
@@ -103,7 +103,7 @@ const SkillsPage = () => {
             </div>
           </div>
 
-          {/* Certifications */}
+          {/* Certifications 
           <div className="glass-effect rounded-2xl p-8" data-aos="fade-down" data-aos-duration="1500">
             <h3 className="text-2xl font-bold gradient-text mb-6">Certifications</h3>
             <div className="space-y-4">
@@ -116,11 +116,12 @@ const SkillsPage = () => {
                 <p className="text-sm text-gray-400">freeCodeCamp - 2023</p>
               </div>
               <div className="border-l-2 border-red-400/30 pl-4">
-                <h4 className="font-semibold text-white">Responsive Web softskill</h4>
+                <h4 className="font-semibold text-white">Laravel E-Learn</h4>
                 <p className="text-sm text-gray-400">freeCodeCamp - 2022</p>
               </div>
             </div>
           </div>
+          */}
         </div>
       </div>
     </div>

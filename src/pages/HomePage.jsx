@@ -28,16 +28,16 @@ const HomePage = () => {
         <div className="text-center max-w-5xl mx-auto">
           {/* Welcome Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8" data-aos="fade-right">
-            <div className="relative w-3 h-3">
+            <div className="relative w-3 h-3" data-aos="zoom-in" data-aos-duration="1500">
               <div className="absolute inset-0 rounded-full bg-green-400 opacity-75 animate-ping" />
               <div className="relative w-full h-full rounded-full bg-green-400 animate-pulse" />
             </div>
-            <span className="text-sm font-medium text-green-400">Available for work</span>
+            <span className="text-sm font-medium text-green-400" data-aos="zoom-in" data-aos-duration="1500">Available</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight" data-aos="fade-right">
-            Hi, I'm <span className="gradient-text">Rifqi Ibrahim</span>
+            Hi i'am <span className="gradient-text">Rifqi Synyster</span>
           </h1>
 
           {/* Subtitle */}

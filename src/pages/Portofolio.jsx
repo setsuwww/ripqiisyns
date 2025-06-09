@@ -1,3 +1,8 @@
+"use client"
+
+import { useState, useRef } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+
 const techColors = {
   MongoDB: "from-green-500/20 to-green-600/20 border-green-400/30 text-green-300",
   Expressjs: "from-yellow-500/20 to-yellow-600/20 border-yellow-400/30 text-yellow-300",
@@ -19,6 +24,10 @@ const techColors = {
 }
 
 const PortfolioPage = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [selectedImage, setSelectedImage] = useState(null)
+  const carouselRef = useRef(null)
+
   const projects = [
     {
       id: 1,
@@ -82,20 +91,65 @@ const PortfolioPage = () => {
     },
   ]
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % projects.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length)
+  }
+
+  const openImageModal = (image) => {
+    setSelectedImage(image)
+  }
+
+  const closeImageModal = () => {
+    setSelectedImage(null)
+  }
+
+  // Touch handlers for swipe functionality
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe) {
+      nextSlide()
+    }
+    if (isRightSwipe) {
+      prevSlide()
+    }
+  }
+
   return (
-    <div className="relative min-h-screen pt-20 pb-16 overflow-hidden">
+    <div className="relative min-h-screen pt-20 pb-16 overflow-hidden bg-black">
       {/* Grid Background */}
-      <div data-aos="zoom-in" data-aos-duration="1000" className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div data-aos="zoom-in" data-aos-duration="1500" className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       {/* Floating Lights */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/3 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl floating-animation" />
+        <div className="absolute top-1/4 left-1/3 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-red-400/10 rounded-full blur-3xl floating-animation"
+          className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-red-400/10 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         />
         <div
-          className="absolute top-1/2 right-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl floating-animation"
+          className="absolute top-1/2 right-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "4s" }}
         />
       </div>
@@ -104,52 +158,51 @@ const PortfolioPage = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1500">
-            My <span className="gradient-text">Portfolio</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            My{" "}
+            <span className="bg-gradient-to-r from-violet-400 to-red-400 bg-clip-text text-transparent">Portfolio</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             A collection of projects that showcase my skills and passion for creating amazing digital experiences.
           </p>
         </div>
 
-        {/* Projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={project.id}
-              className={`group relative glass-effect rounded-2xl overflow-hidden `}
-              data-aos="fade-up" data-aos-duration={500 + index * 200}
+            <div
+              key={project.id}
+              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300"
             >
-
               {/* Image Section */}
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden cursor-pointer" onClick={() => openImageModal(project.image)}>
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               {/* Content Section */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-400 mb-6 text-sm leading-relaxed line-clamp-3">{project.description}</p>
 
-                {/* Enhanced Technology Badges */}
+                {/* Technology Badges */}
                 <div className="space-y-3">
                   <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built with</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <div key={techIndex}
+                      <div
+                        key={techIndex}
                         className={`group/badge relative overflow-hidden px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                           techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"
                         } bg-gradient-to-r cursor-pointer`}
-                        style={{ animationDelay: `${techIndex * 0.05}s` }}
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover/badge:translate-x-[100%] transition-transform duration-700"></div>
-
                         <span className="relative z-10">{tech}</span>
                       </div>
                     ))}
@@ -160,7 +213,119 @@ const PortfolioPage = () => {
           ))}
         </div>
 
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <div className="relative">
+            {/* Carousel Container */}
+            <div
+              className="overflow-hidden"
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+            >
+              <div
+                className="flex transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                ref={carouselRef}
+              >
+                {projects.map((project, index) => (
+                  <div key={project.id} className="w-full flex-shrink-0 px-4">
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
+                      {/* Image Section */}
+                      <div
+                        className="relative overflow-hidden cursor-pointer"
+                        onClick={() => openImageModal(project.image)}
+                      >
+                        <img
+                          src={project.image || "/placeholder.svg"}
+                          alt={project.title}
+                          className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      </div>
+
+                      {/* Content Section */}
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                        <p className="text-gray-400 mb-6 text-sm leading-relaxed">{project.description}</p>
+
+                        {/* Technology Badges */}
+                        <div className="space-y-3">
+                          <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built with</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, techIndex) => (
+                              <div
+                                key={techIndex}
+                                className={`px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm transition-all duration-300 ${
+                                  techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"
+                                } bg-gradient-to-r`}
+                              >
+                                <span>{tech}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-all duration-300 z-10"
+              disabled={currentSlide === 0}
+            >
+              <ChevronLeft className="w-5 h-5 text-white" />
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-all duration-300 z-10"
+              disabled={currentSlide === projects.length - 1}
+            >
+              <ChevronRight className="w-5 h-5 text-white" />
+            </button>
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? "bg-violet-400 w-8" : "bg-gray-600"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-4xl max-h-full">
+            <button
+              onClick={closeImageModal}
+              className="absolute -top-12 right-0 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-2 hover:bg-white/20 transition-all duration-300"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img
+              src={selectedImage || "/placeholder.svg"}
+              alt="Project preview"
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={closeImageModal}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

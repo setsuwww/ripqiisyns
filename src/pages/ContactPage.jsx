@@ -48,16 +48,16 @@ const ContactPage = () => {
       icon: MapPin,
       label: "Location",
       value: "Bekasi, Indonesia",
-      href: "#",
+      href: "https://www.google.com/maps/place/Cluster+Platinum+Sumber+Jaya+Tambun+Selatan/@-6.2302738,107.0695519,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698f9e8822eb15:0x190a2c813a4e41d5!8m2!3d-6.2302738!4d107.0721268!16s%2Fg%2F11fmdrw9j2?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D",
       color: "text-red-400",
     },
   ]
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub", color: "hover:text-yellow-400" },
-    { icon: Instagram, href: "#", label: "Instagram", color: "hover:text-pink-400" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-sky-400" },
-    { icon: Twitter, href: "#", label: "Twitter", color: "hover:text-red-400" },
+    { icon: Github, href: "https://github.com/setsuwww", label: "GitHub", color: "hover:text-yellow-400" },
+    { icon: Instagram, href: "https://www.instagram.com/iam_synyster?igsh=MW40ZHJqYmJ5aF30Q==", label: "Instagram", color: "hover:text-pink-400" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hover:text-sky-400" },
+    { icon: Twitter, href: "#", label: "https://twitter.com", color: "hover:text-sky-400" },
   ]
 
   return (
@@ -81,8 +81,6 @@ const ContactPage = () => {
           </p>
         </div>
 
-
-
         <div className="grid lg:grid-cols-2 gap-12" data-aos="zoom-in" data-aos-duration="1500" >
           {/* Contact Form */}
           <div className="glass-effect rounded-2xl p-8">
@@ -102,7 +100,7 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="John Doe"
+                    placeholder="Dirman Soebardjo"
                   />
                 </div>
 
@@ -118,7 +116,7 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="john@example.com"
+                    placeholder="dirman@example.com"
                   />
                 </div>
               </div>
@@ -135,7 +133,7 @@ const ContactPage = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                  placeholder="Project Discussion"
+                  placeholder="For me right?"
                 />
               </div>
 
@@ -151,7 +149,7 @@ const ContactPage = () => {
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400/50 focus:border-transparent text-white placeholder-gray-400 resize-none transition-all duration-300"
-                  placeholder="Tell me about your project..."
+                  placeholder="You're free to say whatever you..."
                 />
               </div>
 
@@ -181,7 +179,7 @@ const ContactPage = () => {
             <div className="glass-effect rounded-2xl p-8">
               <h2 className="text-2xl font-bold gradient-text mb-6">Contact Information</h2>
 
-              <div className="space-y-6">
+              <div className="space-y-2">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon
                   return (

@@ -6,12 +6,13 @@ import 'aos/dist/aos.css'
 
 import './main.css'
 
-import App from './App.jsx'
 import Navigation from './components/Navigation.jsx'
+import App from './App.jsx'
 import SkillsPage from './pages/Skills.jsx'
 import PortfolioPage from './pages/Portofolio.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
+import Footer from './components/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -36,7 +37,7 @@ createRoot(document.getElementById('root')).render(
       <section id="contact">
         <ContactPage />
       </section>
-
+      <Footer />
     </BrowserRouter>
   </StrictMode>
 )

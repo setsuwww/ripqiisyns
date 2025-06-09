@@ -42,7 +42,7 @@ const AboutPage = () => {
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
-              className="w-20 h-20 object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-20 h-20 object-cover rounded-full grayscale hover:grayscale-0 ease-in-out duration-300"
             />
             <p data-aos="fade-left">About <span className="gradient-text">Me</span></p>
           </h1>
@@ -92,22 +92,19 @@ const AboutPage = () => {
 
             {/* Bio */}
             <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">
-              <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4 md:mb-6">My Story</h3>
+              <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4 md:mb-6">Did u know me?</h3>
               <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   I'm <span className="text-white font-semibold">Rifqi Ibrahim</span>, a passionate fullstack developer
-                  and UI/UX designer currently studying at SMK Telekomunikasi Telesandi Bekasi. My journey in web
-                  development started with curiosity about how websites work, and it has evolved into a deep passion for
-                  creating digital experiences.
+                  currently studying at SMK Telekomunikasi Telesandi Bekasi. My journey in web
+                  development started with curiosity about how websites work.
                 </p>
                 <p>
                   I specialize in modern web technologies including the MERN stack MongoDB, Express.js, React.js,
-                  Node.js, and I'm also proficient in Nextjs and Laravel. I believe in writing clean, maintainable
-                  code and creating user interfaces that are both beautiful and functional.
+                  Node.js, and I'm also proficient in Nextjs and Laravel.
                 </p>
                 <p>
-                  When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and
-                  sharing my knowledge with the developer community.
+                  I like coding, drawing, writing, and playing guitar and i want to be like Synyster gate
                 </p>
               </div>
             </div>

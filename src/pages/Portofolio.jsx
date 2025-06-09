@@ -139,7 +139,11 @@ const PortfolioPage = () => {
   return (
     <div className="relative min-h-screen pt-20 pb-16 overflow-hidden bg-black">
       {/* Grid Background */}
-      <div data-aos="zoom-in" data-aos-duration="1500" className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+        className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:50px_50px]"
+      />
 
       {/* Floating Lights */}
       <div className="absolute inset-0 z-0">
@@ -307,10 +311,16 @@ const PortfolioPage = () => {
 
       {/* Image Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl max-h-full">
+        <div
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={closeImageModal}
+        >
+          <div className="relative w-full max-w-4xl flex items-center justify-center">
             <button
-              onClick={closeImageModal}
+              onClick={(e) => {
+                e.stopPropagation()
+                closeImageModal()
+              }}
               className="absolute -top-12 right-0 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-2 hover:bg-white/20 transition-all duration-300"
             >
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,8 +330,8 @@ const PortfolioPage = () => {
             <img
               src={selectedImage || "/placeholder.svg"}
               alt="Project preview"
-              className="max-w-full max-h-full object-contain rounded-lg"
-              onClick={closeImageModal}
+              className="max-h-[80vh] w-auto object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
             />
           </div>
         </div>

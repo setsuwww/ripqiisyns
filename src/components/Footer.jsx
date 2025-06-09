@@ -24,7 +24,7 @@ const Footer = () => {
                 © {currentYear} 
               </span>
               <span className="text-sm font-medium gradient-text">
-                Rifqi Ibrahim
+                Rifqi Synyster
               </span>
               <span className="text-sm">
                 All rights reserved.

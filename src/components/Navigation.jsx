@@ -71,7 +71,6 @@ const Navigation = ({ children }) => {
                     <Icon size={18} />
                     <span>{item.label}</span>
                   </a>
-
                 )
               })}
             </div>
@@ -91,9 +90,9 @@ const Navigation = ({ children }) => {
                   return (
                     <a
                       key={item.href}
-                      to={item.href}
+                      href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`w-1/2 flex items-center font-semibold space-x-2 px-4 py-3 transition-all duration-300 border-0 border-l-4 border-transparent rounded-r-full ${location.pathname === item.href
+                      className={`w-1/2 flex items-center font-semibold space-x-2 px-4 py-3 transition-all duration-300 border-0 border-l-4 border-transparent rounded-r-full ${activeSection === item.href.slice(1)
                         ? "text-yellow-400"
                         : "text-gray-500 hover:bg-yellow-100 hover:text-yellow-800 hover:border-yellow-400 cursor-pointer"
                         }`}

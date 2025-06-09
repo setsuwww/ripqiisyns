@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative mt-20">
+    <footer className="w-full relative mt-20">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -bottom-32 left-1/4 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl animate-pulse" />

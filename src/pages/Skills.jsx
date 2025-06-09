@@ -4,10 +4,6 @@ import { Code, Palette, Server, Database, Globe, Smartphone } from "lucide-react
 const SkillsPage = () => {
   const [activeCategory, setActiveCategory] = useState("fullstack")
 
-  const skillCategories = [
-    { id: "fullstack", label: "Fullstack", icon: Code },
-  ]
-
   const skills = {
     fullstack: [
       { name: "Next.js", level: 95, color: "from-white to-gray-400" },
@@ -22,7 +18,7 @@ const SkillsPage = () => {
   }
 
   return (
-    <div className="relative min-h-screen pt-20 pb-16">
+    <div className="w-full relative min-h-screen pt-20 pb-16">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl floating-animation" />

@@ -61,7 +61,7 @@ const ContactPage = () => {
   ]
 
   return (
-    <div className="relative min-h-screen pt-20 pb-16">
+    <div className="w-full relative min-h-screen pt-20 pb-16">
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl floating-animation" />
         <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl floating-animation" style={{ animationDelay: "2s" }}/>

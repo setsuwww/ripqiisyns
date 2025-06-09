@@ -24,7 +24,7 @@ const AboutPage = () => {
   ]
 
   return (
-    <div className="relative min-h-screen pt-20 pb-16">
+    <div className="w-full relative min-h-screen pt-20 pb-16">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl floating-animation" data-aos="zoom-out" data-aos-duration="1500" />

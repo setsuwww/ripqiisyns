@@ -5,7 +5,6 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage/>} />
-      {/* tambahkan route lain di sini */}
     </Routes>
   )
 }

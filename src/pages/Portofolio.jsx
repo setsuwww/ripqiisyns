@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useRef } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
@@ -25,7 +23,6 @@ const techColors = {
 
 const PortfolioPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [selectedImage, setSelectedImage] = useState(null)
   const carouselRef = useRef(null)
 
   const projects = [
@@ -99,15 +96,6 @@ const PortfolioPage = () => {
     setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length)
   }
 
-  const openImageModal = (image) => {
-    setSelectedImage(image)
-  }
-
-  const closeImageModal = () => {
-    setSelectedImage(null)
-  }
-
-  // Touch handlers for swipe functionality
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
 
@@ -137,7 +125,7 @@ const PortfolioPage = () => {
   }
 
   return (
-    <div className="relative min-h-screen pt-20 pb-16 overflow-hidden bg-black">
+    <div className="w-full relative min-h-screen pt-20 pb-16 overflow-hidden bg-black">
       {/* Grid Background */}
       <div
         data-aos="zoom-in"
@@ -221,26 +209,17 @@ const PortfolioPage = () => {
         <div className="md:hidden">
           <div className="relative">
             {/* Carousel Container */}
-            <div
-              className="overflow-hidden"
-              onTouchStart={onTouchStart}
-              onTouchMove={onTouchMove}
-              onTouchEnd={onTouchEnd}
-            >
-              <div
-                className="flex transition-transform duration-300 ease-in-out"
+            <div className="overflow-hidden" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+              <div className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 ref={carouselRef}
               >
                 {projects.map((project, index) => (
                   <div key={project.id} className="w-full flex-shrink-0 px-4">
                     <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
-                      {/* Image Section */}
-                      <div
-                        className="relative overflow-hidden cursor-pointer"
-                      >
-                        <img
-                          src={project.image || "/placeholder.svg"}
+
+                      <div className="relative overflow-hidden cursor-pointer">
+                        <img src={project.image || "/placeholder.svg"}
                           alt={project.title}
                           className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                         />

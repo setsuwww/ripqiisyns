@@ -108,9 +108,6 @@ const Navigation = ({ children }) => {
         </div>
       </nav>
 
-      <main className="pt-20">
-        {children}
-      </main>
     </>
   )
 }

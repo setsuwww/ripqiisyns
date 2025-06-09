@@ -309,33 +309,6 @@ const PortfolioPage = () => {
         </div>
       </div>
 
-      {/* Image Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={closeImageModal}
-        >
-          <div className="relative w-full max-w-4xl flex items-center justify-center">
-            <button
-              onClick={(e) => {
-                e.stopPropagation()
-                closeImageModal()
-              }}
-              className="absolute -top-12 right-0 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-2 hover:bg-white/20 transition-all duration-300"
-            >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <img
-              src={selectedImage || "/placeholder.svg"}
-              alt="Project preview"
-              className="max-h-[80vh] w-auto object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        </div>
-      )}
     </div>
   )
 }

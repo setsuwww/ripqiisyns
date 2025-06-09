@@ -179,7 +179,7 @@ const PortfolioPage = () => {
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300"
             >
               {/* Image Section */}
-              <div className="relative overflow-hidden cursor-pointer" onClick={() => openImageModal(project.image)}>
+              <div className="relative overflow-hidden cursor-pointer">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
@@ -238,7 +238,6 @@ const PortfolioPage = () => {
                       {/* Image Section */}
                       <div
                         className="relative overflow-hidden cursor-pointer"
-                        onClick={() => openImageModal(project.image)}
                       >
                         <img
                           src={project.image || "/placeholder.svg"}

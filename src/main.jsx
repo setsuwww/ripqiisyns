@@ -14,30 +14,36 @@ import ContactPage from './pages/ContactPage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import Footer from './components/Footer.jsx'
 
+AOS.init()
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <Navigation />
-      <section id="home" className='w-screen overflow-x-hidden'>
-        <App />
-      </section>
+      <div className="overflow-x-hidden">
+        <Navigation />
+        
+        <section id="home" className="w-full">
+          <App />
+        </section>
 
-      <section id="about">
-        <AboutPage />
-      </section>
+        <section id="about" className="w-full">
+          <AboutPage />
+        </section>
 
-      <section id="portofolio">
-        <PortfolioPage />
-      </section>
+        <section id="portofolio" className="w-full">
+          <PortfolioPage />
+        </section>
 
-      <section id="skills">
-        <SkillsPage />
-      </section>
+        <section id="skills" className="w-full">
+          <SkillsPage />
+        </section>
 
-      <section id="contact">
-        <ContactPage />
-      </section>
-      <Footer />
+        <section id="contact" className="w-full">
+          <ContactPage />
+        </section>
+
+        <Footer />
+      </div>
     </BrowserRouter>
   </StrictMode>
 )

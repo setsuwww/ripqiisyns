@@ -136,25 +136,19 @@ const PortfolioPage = () => {
       {/* Floating Lights */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/3 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-red-400/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute top-1/2 right-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        />
+        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-red-400/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white" data-aos="fade-down">
             My{" "}
             <span className="bg-gradient-to-r from-violet-400 to-red-400 bg-clip-text text-transparent">Portfolio</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up">
             A collection of projects that showcase my skills and passion for creating amazing digital experiences.
           </p>
         </div>
@@ -162,10 +156,7 @@ const PortfolioPage = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300"
-            >
+            <div key={project.id} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300"  data-aos="fade-right" data-aos-duration={600 + index * 50}>
               {/* Image Section */}
               <div className="relative overflow-hidden cursor-pointer">
                 <img

@@ -72,18 +72,18 @@ const ContactPage = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-duration="1500" >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1500" >
             Get In <span className="gradient-text">Touch</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="zoom-in" data-aos-duration="1500" >
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1500" >
             Have a project in mind or just want to chat? I'd love to hear from you. Let's create something amazing
             together!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12" data-aos="zoom-in" data-aos-duration="1500" >
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="glass-effect rounded-2xl p-8">
+          <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1500">
             <h2 className="text-2xl font-bold gradient-text mb-6">Send Message</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6" >
@@ -176,7 +176,7 @@ const ContactPage = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Contact Details */}
-            <div className="glass-effect rounded-2xl p-8">
+            <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1500">
               <h2 className="text-2xl font-bold gradient-text mb-6">Contact Information</h2>
 
               <div className="space-y-2">
@@ -204,7 +204,7 @@ const ContactPage = () => {
             </div>
 
             {/* Social Links */}
-            <div className="glass-effect rounded-2xl p-8">
+            <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1600">
               <h2 className="text-2xl font-bold gradient-text mb-6">Follow Me</h2>
 
               <div className="flex space-x-4">
@@ -225,7 +225,7 @@ const ContactPage = () => {
             </div>
 
             {/* Availability */}
-            <div className="glass-effect rounded-2xl p-8">
+            <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1700">
               <h2 className="text-2xl font-bold gradient-text mb-6">Availability</h2>
 
               <div className="space-y-4">

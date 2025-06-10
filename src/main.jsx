@@ -18,7 +18,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Navigation />
-      <section id="home">
+      <section id="home" className='w-screen overflow-x-hidden'>
         <App />
       </section>
 

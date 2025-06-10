@@ -4,14 +4,25 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width:0px;
+}
+
+
 @layer base {
   * {
     @apply border-0;
   }
   body {
     @apply bg-black text-white overflow-x-hidden;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
 }
+
 
 
 @layer components {

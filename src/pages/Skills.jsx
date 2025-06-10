@@ -12,8 +12,8 @@ const SkillsPage = () => {
       { name: "Angular", level: 75, color: "from-red-400 to-red-600" },
       { name: "Laravel", level: 95, color: "from-red-400 to-red-600" },
       { name: "PHP", level: 80, color: "from-purple-400 to-purple-600" },
-      { name: "TypeScript", level: 85, color: "from-blue-400 to-blue-500" },
-      { name: "JavaScript", level: 90, color: "from-yellow-400 to-yellow-600" },
+      { name: "TypeScript", nameSingkat: "TS", level: 85, color: "from-blue-400 to-blue-500" },
+      { name: "JavaScript", nameSingkat: "JS", level: 90, color: "from-yellow-400 to-yellow-600" },
     ],
   }
 
@@ -34,7 +34,7 @@ const SkillsPage = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1500">
             My <span className="gradient-text">Skills</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-down" data-aos-duration="1500">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
             A comprehensive overview of my technical skills and expertise across different domains of web development.
           </p>
         </div>
@@ -45,10 +45,11 @@ const SkillsPage = () => {
               key={skill.name}
               className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
               data-aos="fade-down"
-              data-aos-duration={600 + index * 200}
+              data-aos-duration={400 + index * 200}
             >
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
+                <h3 className="md:hidden text-lg font-semibold text-white">{skill.nameSingkat ?? skill.name}</h3>
+                <h3 className="hidden md:inline text-lg font-semibold text-white">{skill.name}</h3>
                 <span className="text-sm font-medium text-gray-400">{skill.level}%</span>
               </div>
 

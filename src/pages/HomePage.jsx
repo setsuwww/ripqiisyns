@@ -36,17 +36,17 @@ const HomePage = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight" data-aos="fade-right">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight" data-aos="zoom-in" data-aos-duration="2000">
             Hi i'am <span className="gradient-text">Rifqi Synyster</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light" data-aos="fade-right">
+          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light" data-aos="flip-up" data-aos-duration="1000">
             Fullstack Developer & UI/UX Designer
           </p>
 
           {/* Description */}
-          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-right">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up">
             I create modern, responsive web applications using cutting-edge technologies. Passionate about clean code,
             beautiful design, and exceptional user experiences.
           </p>
@@ -60,7 +60,7 @@ const HomePage = () => {
             </a>
 
             <a
-              href="#contact" data-aos="fade-right"
+              href="#contact" data-aos="fade-left"
               className="group glass-effect border-violet-400/50 text-violet-300 hover:bg-violet-500/10 hover:border-violet-400 px-8 py-4 rounded-full transition-all duration-300 flex items-center"
             >
               <Mail className="mr-2 w-5 h-5 group-hover:scale-125 transition-transform" />

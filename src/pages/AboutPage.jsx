@@ -44,7 +44,7 @@ const AboutPage = () => {
               data-aos-duration="2000"
               className="w-20 h-20 object-cover rounded-full grayscale hover:grayscale-0 ease-in-out duration-300"
             />
-            <p data-aos="fade-left">About <span className="gradient-text">Me</span></p>
+            <p data-aos="fade-right" data-aos-duration="1000">About <span className="gradient-text">Me</span></p>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-left">
             Get to know more about my journey, skills, and passion for creating amazing digital experiences.
@@ -59,7 +59,7 @@ const AboutPage = () => {
               <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4">Personal Info</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 rounded-full bg-yellow-400/20 flex-shrink-0">
+                  <div className="p-2 rounded-full bg-yellow-400/20 flex-shrink-0" data-aos="fade-right">
                     <MapPin className="w-5 h-5 text-yellow-400" />
                   </div>
                   <div>
@@ -69,7 +69,7 @@ const AboutPage = () => {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 rounded-full bg-violet-400/20 flex-shrink-0">
+                  <div className="p-2 rounded-full bg-violet-400/20 flex-shrink-0" data-aos="fade-right">
                     <GraduationCap className="w-5 h-5 text-violet-400" />
                   </div>
                   <div>
@@ -79,7 +79,7 @@ const AboutPage = () => {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 rounded-full bg-red-400/20 flex-shrink-0">
+                  <div className="p-2 rounded-full bg-red-400/20 flex-shrink-0" data-aos="fade-right">
                     <Calendar className="w-5 h-5 text-red-400" />
                   </div>
                   <div>
@@ -115,8 +115,8 @@ const AboutPage = () => {
               <div className="space-y-6">
                 {experiences.map((exp, index) => (
                   <div key={index} className="border-l-2 border-yellow-400/30 pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-yellow-400 rounded-full -left-[0.5rem] top-2"></div>
-                    <h4 className="text-lg font-semibold text-white">{exp.title}</h4>
+                    <div className="absolute w-3 h-3 bg-yellow-400 rounded-full -left-[0.5rem] top-2" data-aos="fade-up" data-aos-duration={600 + index * 200}></div>
+                    <h4 className="text-lg font-semibold text-white" data-aos="fade-right" data-aos-duration={800 + index * 200}>{exp.title}</h4>
                     <p className="text-violet-400 font-medium">{exp.company}</p>
                     <p className="text-sm text-gray-400 mb-2">{exp.period}</p>
                     <p className="text-gray-300">{exp.description}</p>

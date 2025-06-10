@@ -4,17 +4,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-}
-
 @layer base {
   * {
     @apply border-0;
   }
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-white overflow-x-hidden;
   }
 }
+
 
 @layer components {
   .glass-effect {

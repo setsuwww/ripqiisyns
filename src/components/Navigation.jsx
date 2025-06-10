@@ -45,7 +45,7 @@
     return (
       <>
         <nav className={`w-full fixed top-0 z-50 transition-all duration-300 ${scrolled ? "glass-effect shadow-lg" : "bg-transparent"}`} data-aos="fade-down" data-aos-duration="1000">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
             <div className="flex justify-between items-center h-16">
               {/* Logo */}
               <p className="flex items-center space-x-2 text-2xl font-bold">
@@ -78,7 +78,7 @@
 
             {/* Mobile Navigation */}
             {isOpen && (
-              <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-br-full">
+              <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-br-full overflow-hidden">
                 <div className="px-4 py-4 space-y-2">
                   {navItems.map((item) => {
                     const Icon = item.icon

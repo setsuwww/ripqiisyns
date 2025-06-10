@@ -42,7 +42,7 @@ const PortfolioPage = () => {
       description:
         "It's my first project used for Touring application, made by Mysql for database, Expressjs for API, Vuejs for frontend, Nodejs for Runtimer",
       image: "/Tourvue.png",
-      technologies: ["MongoDB", "Expressjs", "Vuejs", "Tailwindcss", "Nodejs"],
+      technologies: ["MySQL", "Expressjs", "Vuejs", "Tailwindcss", "Nodejs"],
       github: "#",
       demo: "#",
     },

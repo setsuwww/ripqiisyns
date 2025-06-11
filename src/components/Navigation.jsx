@@ -96,7 +96,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-br-3xl shadow-md overflow-hidden z-50">
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-br-full shadow-md overflow-hidden z-50">
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => {
                 const Icon = item.icon

@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send, Instagram, Github, Linkedin, Twitter } from "lucide-react"
+import Swal from "sweetalert2";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -18,16 +18,35 @@ const ContactPage = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    alert("Message sent successfully!")
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setIsSubmitting(false)
-  }
+      if (!response.ok) throw new Error("Failed to send message");
+
+      Swal.fire({
+        icon: 'success',
+        title: 'WAW, Makasih',
+        text: 'Pesan berhasil dikirim',
+        confirmButtonColor: '#8b5cf6',
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to send message.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
 
   const contactInfo = [
     {
@@ -64,11 +83,11 @@ const ContactPage = () => {
     <div className="w-full relative min-h-screen pt-20 pb-16">
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl floating-animation" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl floating-animation" style={{ animationDelay: "2s" }}/>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl floating-animation" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div data-aos="zoom-out" data-aos-duration="1500"  className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      
+      <div data-aos="zoom-out" data-aos-duration="1500" className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:50px_50px]" />
+
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -119,22 +138,6 @@ const ContactPage = () => {
                     placeholder="dirman@example.com"
                   />
                 </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                  placeholder="For me right?"
-                />
               </div>
 
               <div>

@@ -53,13 +53,13 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <p className="flex items-center space-x-2 text-2xl font-bold">
+          <p className="flex items-center space-x-2 font-bold">
             <img
               src="/pp.jpg"
               alt=""
               className="size-10 object-cover lg:size-12 rounded-full"
             />
-            <span>
+            <span className="text-xl md:text-4xl">
               Rifqi <span className="gradient-text">Synyster</span>
             </span>
           </p>

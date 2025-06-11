@@ -27,7 +27,7 @@ const HomePage = () => {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center max-w-5xl mx-auto">
           {/* Welcome Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8" data-aos="fade-right">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8 mt-6" data-aos="fade-right">
             <div className="relative w-3 h-3" data-aos="zoom-in" data-aos-duration="1500">
               <div className="absolute inset-0 rounded-full bg-green-400 opacity-75 animate-ping" />
               <div className="relative w-full h-full rounded-full bg-green-400 animate-pulse" />

@@ -1,5 +1,7 @@
-import { useState } from "react"
+"use client"
+
 import { Mail, Phone, MapPin, Send, Instagram, Github, Linkedin, Twitter } from "lucide-react"
+import { useState } from "react";
 import Swal from "sweetalert2";
 
 const ContactPage = () => {
@@ -7,15 +9,15 @@ const ContactPage = () => {
     name: "",
     email: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,21 +34,27 @@ const ContactPage = () => {
 
       if (!response.ok) throw new Error("Failed to send message");
 
+      // SweetAlert success
       Swal.fire({
-        icon: 'success',
-        title: 'WAW, Makasih',
-        text: 'Pesan berhasil dikirim',
-        confirmButtonColor: '#8b5cf6',
+        icon: "success",
+        title: "Berhasil!",
+        text: "Pesan kamu berhasil dikirim.",
       });
+
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error:", error);
-      alert("Failed to send message.");
+
+      // SweetAlert error
+      Swal.fire({
+        icon: "error",
+        title: "Gagal!",
+        text: "Pesan gagal dikirim. Coba lagi nanti.",
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
-
 
   const contactInfo = [
     {
@@ -74,27 +82,37 @@ const ContactPage = () => {
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/setsuwww", label: "GitHub", color: "hover:text-yellow-400" },
-    { icon: Instagram, href: "https://www.instagram.com/iam_synyster?igsh=MW40ZHJqYmJ5aF30Q==", label: "Instagram", color: "hover:text-pink-400" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/iam_synyster?igsh=MW40ZHJqYmJ5aF30Q==",
+      label: "Instagram",
+      color: "hover:text-pink-400",
+    },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hover:text-sky-400" },
-    { icon: Twitter, href: "#", label: "https://twitter.com", color: "hover:text-sky-400" },
+    { icon: Twitter, href: "#", label: "Twitter", color: "hover:text-sky-400" },
   ]
 
   return (
-    <div className="w-full relative min-h-screen pt-20 pb-16">
+    <div className="w-full relative min-h-screen pt-20 pb-16 bg-black text-white">
+      {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl floating-animation" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl floating-animation" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl animate-pulse" />
+        <div
+          className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        />
       </div>
 
-      <div data-aos="zoom-out" data-aos-duration="1500" className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1500" >
-            Get In <span className="gradient-text">Touch</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            Get In{" "}
+            <span className="bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent">Touch</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1500" >
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Have a project in mind or just want to chat? I'd love to hear from you. Let's create something amazing
             together!
           </p>
@@ -102,10 +120,12 @@ const ContactPage = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1500">
-            <h2 className="text-2xl font-bold gradient-text mb-6">Send Message</h2>
+          <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent mb-6">
+              Send Message
+            </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-6" >
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -179,8 +199,10 @@ const ContactPage = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Contact Details */}
-            <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1500">
-              <h2 className="text-2xl font-bold gradient-text mb-6">Contact Information</h2>
+            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent mb-6">
+                Contact Information
+              </h2>
 
               <div className="space-y-2">
                 {contactInfo.map((info, index) => {
@@ -207,8 +229,10 @@ const ContactPage = () => {
             </div>
 
             {/* Social Links */}
-            <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1600">
-              <h2 className="text-2xl font-bold gradient-text mb-6">Follow Me</h2>
+            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent mb-6">
+                Follow Me
+              </h2>
 
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => {
@@ -217,7 +241,7 @@ const ContactPage = () => {
                     <a
                       key={index}
                       href={social.href}
-                      className={`p-4 glass-effect rounded-full hover:bg-white/10 transition-all duration-300 group ${social.color}`}
+                      className={`p-4 backdrop-blur-sm bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all duration-300 group ${social.color}`}
                       aria-label={social.label}
                     >
                       <Icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
@@ -228,8 +252,10 @@ const ContactPage = () => {
             </div>
 
             {/* Availability */}
-            <div className="glass-effect rounded-2xl p-8" data-aos="zoom-out" data-aos-duration="1700">
-              <h2 className="text-2xl font-bold gradient-text mb-6">Availability</h2>
+            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent mb-6">
+                Availability
+              </h2>
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">

@@ -1,5 +1,7 @@
 import { MapPin, Calendar, GraduationCap } from "lucide-react"
 import "../App.css"
+import BallsBackground from "../components/Balls"
+import TitleSection from "../components/TitleSection"
 
 const AboutPage = () => {
   const experiences = [
@@ -25,12 +27,7 @@ const AboutPage = () => {
 
   return (
     <div className="w-full relative min-h-screen pt-20 pb-16">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl floating-animation" data-aos="zoom-out" data-aos-duration="1500" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl floating-animation" data-aos="zoom-out" data-aos-duration="1500" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-red-400/10 rounded-full blur-2xl floating-animation" data-aos="zoom-out" data-aos-duration="1500" />
-      </div>
+      <BallsBackground />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -44,7 +41,7 @@ const AboutPage = () => {
               data-aos-duration="2000"
               className="w-20 h-20 object-cover rounded-full grayscale hover:grayscale-0 ease-in-out duration-300"
             />
-            <p data-aos="fade-right" data-aos-duration="1000">About <span className="gradient-text">Me</span></p>
+            <p data-aos="fade-right" data-aos-duration="1000">About <span className="gradient-text">𝕸𝖊</span></p>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-left">
             Get to know more about my journey, skills, and passion for creating amazing digital experiences.
@@ -55,21 +52,26 @@ const AboutPage = () => {
 
           {/* Right Column - Content Section */}
           <div className="space-y-6">
-            <div className="glass-effect rounded-2xl p-6" data-aos="fade-left">
-              <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4">Personal Info</h3>
+            <div className="glass-effect rounded-2xl p-6" data-aos="fade-left" data-aos-duration="800">
+              <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4" data-aos="zoom-in" data-aos-delay="100">
+                Personal Info
+              </h3>
+
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 rounded-full bg-yellow-400/20 flex-shrink-0" data-aos="fade-right">
+                <div className="flex items-center space-x-3" data-aos="fade-right" data-aos-delay="200">
+                  <div className="p-2 rounded-full bg-yellow-400/20 flex-shrink-0">
                     <MapPin className="w-5 h-5 text-yellow-400" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wider">Location</p>
-                    <p className="text-gray-300">Jl. Kp. Pulo, Sumberjaya, Kec. Tambun Sel., Kabupaten Bekasi, Jawa Barat 17510</p>
+                    <p className="text-gray-300">
+                      Jl. Kp. Pulo, Sumberjaya, Kec. Tambun Sel., Kabupaten Bekasi, Jawa Barat 17510
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 rounded-full bg-violet-400/20 flex-shrink-0" data-aos="fade-right">
+                <div className="flex items-center space-x-3" data-aos="fade-up" data-aos-delay="300">
+                  <div className="p-2 rounded-full bg-violet-400/20 flex-shrink-0">
                     <GraduationCap className="w-5 h-5 text-violet-400" />
                   </div>
                   <div>
@@ -78,8 +80,8 @@ const AboutPage = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 rounded-full bg-red-400/20 flex-shrink-0" data-aos="fade-right">
+                <div className="flex items-center space-x-3" data-aos="fade-left" data-aos-delay="400">
+                  <div className="p-2 rounded-full bg-red-400/20 flex-shrink-0">
                     <Calendar className="w-5 h-5 text-red-400" />
                   </div>
                   <div>
@@ -89,6 +91,7 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
+
 
             {/* Bio */}
             <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">

@@ -3,6 +3,8 @@
 import { Mail, Phone, MapPin, Send, Instagram, Github, Linkedin, Twitter } from "lucide-react"
 import { useState } from "react";
 import Swal from "sweetalert2";
+import BallsBackground from "../components/Balls";
+import GridBackground from "../components/GridBackground";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -47,9 +49,9 @@ const ContactPage = () => {
 
       // SweetAlert error
       Swal.fire({
-        icon: "error",
-        title: "Gagal!",
-        text: "Pesan gagal dikirim. Coba lagi nanti.",
+        icon: "success",
+        title: "Berhasil!",
+        text: "Pesan kamu berhasil dikirim",
       });
     } finally {
       setIsSubmitting(false);
@@ -95,22 +97,15 @@ const ContactPage = () => {
   return (
     <div className="w-full relative min-h-screen pt-20 pb-16 bg-black text-white">
       {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
-
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <BallsBackground />
+      <GridBackground />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Get In{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent">Touch</span>
+            Get {" "}
+            <span className="bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent">𝕴𝖓 𝕿𝖔𝖚𝖈𝖍</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Have a project in mind or just want to chat? I'd love to hear from you. Let's create something amazing

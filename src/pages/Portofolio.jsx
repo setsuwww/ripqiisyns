@@ -1,5 +1,7 @@
 import { useState, useRef } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import GridBackground from "../components/GridBackground"
+import BallsBackground from "../components/Balls"
 
 const techColors = {
   MongoDB: "from-green-500/20 to-green-600/20 border-green-400/30 text-green-300",
@@ -126,19 +128,9 @@ const PortfolioPage = () => {
 
   return (
     <div className="w-full relative min-h-screen pt-20 pb-16 overflow-hidden bg-black">
-      {/* Grid Background */}
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-        className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:50px_50px]"
-      />
+      <GridBackground />
 
-      {/* Floating Lights */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/3 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-red-400/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
-      </div>
+      <BallsBackground />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,7 +138,7 @@ const PortfolioPage = () => {
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white" data-aos="fade-down">
             My{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-red-400 bg-clip-text text-transparent">Portfolio</span>
+            <span className="bg-gradient-to-r from-violet-400 to-red-400 bg-clip-text text-transparent">𝕻𝖔𝖗𝖙𝖔𝖋𝖔𝖑𝖎𝖔</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up">
             A collection of projects that showcase my skills and passion for creating amazing digital experiences.

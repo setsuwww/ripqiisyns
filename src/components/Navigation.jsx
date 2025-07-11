@@ -44,9 +44,8 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-effect shadow-lg" : "bg-transparent"
-      }`}
+      className={`w-full fixed top-0 z-50 transition-all duration-300 ${scrolled ? "glass-effect shadow-lg" : "bg-transparent"
+        }`}
       data-aos="fade-down"
       data-aos-duration="1000"
     >
@@ -59,8 +58,8 @@ const Navigation = () => {
               alt=""
               className="size-10 object-cover lg:size-12 rounded-full"
             />
-            <span className="text-xl md:text-4xl">
-              Rifqi <span className="gradient-text">Synyster</span>
+            <span className="text-xl md:text-2xl">
+              𝕽𝖎𝖋𝖖𝖎<span className="gradient-text"> 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗</span>
             </span>
           </p>
 
@@ -72,11 +71,10 @@ const Navigation = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 ${
-                    activeSection === item.href.slice(1)
-                      ? "text-yellow-400 bg-white/5"
-                      : "text-gray-500 hover:text-yellow-400"
-                  }`}
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 ${activeSection === item.href.slice(1)
+                    ? "text-yellow-400 bg-white/5"
+                    : "text-gray-500 hover:text-yellow-400"
+                    }`}
                 >
                   <Icon size={18} />
                   <span>{item.label}</span>
@@ -96,8 +94,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-br-full shadow-md overflow-hidden z-50">
-            <div className="px-4 py-4 space-y-2">
+          <div className={`md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-bl-full shadow-md overflow-hidden z-50 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className="px-4 py-4 space-y-2 text-right">
               {navItems.map((item) => {
                 const Icon = item.icon
                 return (
@@ -105,14 +103,15 @@ const Navigation = () => {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center font-semibold space-x-2 px-4 py-3 transition-all duration-300 border-0 border-l-4 border-transparent rounded-r-full ${
-                      activeSection === item.href.slice(1)
-                        ? "text-yellow-400"
-                        : "text-gray-500 hover:bg-yellow-100 hover:text-yellow-800 hover:border-yellow-400 cursor-pointer"
-                    }`}
+                    className={`flex justify-end items-center font-semibold space-x-2 px-4 py-3 transition-all duration-300 border-0 border-r-4 border-transparent rounded-l-full ${activeSection === item.href.slice(1)
+                        ? 'text-yellow-400'
+                        : 'text-gray-500 cursor-pointer hover:text-yellow-500'
+                      }`}
                   >
-                    <Icon size={20} />
-                    <span>{item.label}</span>
+                    <div className="flex items-center">
+                      <Icon size={30} />
+                      <span className="text-right w-full">{item.label}</span>
+                    </div>
                   </a>
                 )
               })}

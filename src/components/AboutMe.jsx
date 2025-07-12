@@ -14,7 +14,7 @@ export default function AboutSection() {
     <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">
       <TitleForm title="Did U Know me?"/>
 
-      <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
+      <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed text-xs md:text-base">
         <p>
           I'm <span className="text-white font-semibold">Rifqi Ibrahim</span>, a passionate fullstack developer
           currently studying at SMK Telekomunikasi Telesandi Bekasi. My journey in web development started

@@ -1,5 +1,4 @@
 import { Typewriter } from 'react-simple-typewriter'
-import "../App.css"
 
 export default function TypingEffect() {
   return (

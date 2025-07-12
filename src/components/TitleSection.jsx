@@ -5,7 +5,7 @@ export default function TitleSection({ text, highlight, aos = 'zoom-in', aosDura
       data-aos-duration={aosDuration}
     >
       {text}{' '}
-      {highlight && <span className="gradient-text">{highlight}</span>}
+      {highlight && <span className="gradient-text font-pirata">{highlight}</span>}
     </h1>
   )
 }

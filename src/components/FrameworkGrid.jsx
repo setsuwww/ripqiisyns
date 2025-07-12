@@ -9,7 +9,7 @@ export default function FrameworkGrid() {
           <SiNextdotjs className="w-8 h-8 text-white" />
         </div>
         <h4 className="font-pixel text-2xl font-semibold text-white mb-2">Next.js</h4>
-        <p className="text-gray-400 text-sm">A powerful React framework with CSR, SSR, ISR, SSG, and SEO Performance</p>
+        <p className="text-gray-400 text-sm">A powerful React framework with CSR, SSR, ISR, SSG, API Routing and SEO Performance</p>
       </div>
 
       <div data-aos="zoom-in" data-aos-duration={600} className="glass-effect rounded-2xl p-6 flex flex-col items-start hover:bg-white/10 transition-all duration-300">
@@ -25,7 +25,7 @@ export default function FrameworkGrid() {
           <SiLaravel className="w-8 h-8 text-red-300" />
         </div>
         <h4 className="font-pixel text-2xl font-semibold text-red-300 mb-2">Laravel</h4>
-        <p className="text-gray-400 text-sm">Elegant backend framework with Blade, APIs, and MVC Structure.</p>
+        <p className="text-gray-400 text-sm">PHP Elegant backend framework with Blade, APIs, and Model, View, Controller Structure.</p>
       </div>
     </div>
   )

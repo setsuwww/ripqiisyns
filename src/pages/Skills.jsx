@@ -40,7 +40,7 @@ const SkillsPage = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1500">
-            My <span className="gradient-text">𝕾𝖐𝖎𝖑𝖘𝖘</span>
+            My <span className="gradient-text">𝕾𝖐𝖎𝖑𝖑𝖘</span>
           </h1>
           <p className="text-sm lg:text-base text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
             A comprehensive overview of my technical skills and expertise across different domains of web development.

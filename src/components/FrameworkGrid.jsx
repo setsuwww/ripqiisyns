@@ -8,7 +8,7 @@ export default function FrameworkGrid() {
         <div className="w-12 h-12 mb-4 rounded-full bg-white/10 flex items-center justify-center">
           <SiNextdotjs className="w-8 h-8 text-white" />
         </div>
-        <h4 className="text-xl font-semibold text-white mb-2">Next.js</h4>
+        <h4 className="font-pixel text-2xl font-semibold text-white mb-2">Next.js</h4>
         <p className="text-gray-400 text-sm">A powerful React framework with CSR, SSR, ISR, SSG, and SEO Performance</p>
       </div>
 
@@ -16,7 +16,7 @@ export default function FrameworkGrid() {
         <div className="w-12 h-12 mb-4 rounded-full bg-emerald-500/10 flex items-center justify-center">
           <SiNuxtdotjs className="w-8 h-8 text-emerald-300" />
         </div>
-        <h4 className="text-xl font-semibold text-white mb-2">Nuxt.js</h4>
+        <h4 className="font-pixel text-2xl font-semibold text-emerald-300 mb-2">Nuxt.js</h4>
         <p className="text-gray-400 text-sm">Vue-based framework with SSR and SSG same as Nextjs but Vue-based.</p>
       </div>
 
@@ -24,7 +24,7 @@ export default function FrameworkGrid() {
         <div className="w-12 h-12 mb-4 rounded-full bg-red-500/20 flex items-center justify-center">
           <SiLaravel className="w-8 h-8 text-red-300" />
         </div>
-        <h4 className="text-xl font-semibold text-white mb-2">Laravel</h4>
+        <h4 className="font-pixel text-2xl font-semibold text-red-300 mb-2">Laravel</h4>
         <p className="text-gray-400 text-sm">Elegant backend framework with Blade, APIs, and MVC Structure.</p>
       </div>
     </div>

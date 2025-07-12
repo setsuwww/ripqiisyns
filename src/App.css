@@ -15,6 +15,13 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'PirataOne';
+  src: url('/fonts/PirataOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply border-0;
@@ -33,6 +40,14 @@ html {
 .typing-font {
   @apply text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light;
   font-family: "VT323"
+}
+
+.font-pixel {
+  font-family: "VT323"
+}
+
+.font-pirata {
+  font-family: "PirataOne"
 }
 
 @layer components {

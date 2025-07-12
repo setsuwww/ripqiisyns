@@ -54,7 +54,7 @@ const HomePage = () => {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <a href="#contact" className="group relative px-8 py-4 rounded-full text-violet-300 font-semibold border-b-2 border-violet-800 hover:border-violet-400 group overflow-hidden z-10 bg-black/30">
+            <a href="#contact" className="group relative px-8 py-4 rounded-full text-violet-300 font-semibold border-b-2 border-violet-800 hover:border-violet-400 group overflow-hidden z-10 bg-gradient-to-t from-transparent via-transparent to-transparent hover:to-violet-500/20">
               <span className="relative z-10 flex items-center">
                 <Mail className="group-hover:scale-125 transform transition-transform mr-2 w-5 h-5" />
                 Get In Touch

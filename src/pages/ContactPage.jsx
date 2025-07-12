@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 
 import BallsBackground from "../components/Balls";
 import GridBackground from "../components/GridBackground";
+import TitleForm from "../components/TitleForm";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -113,10 +114,8 @@ const ContactPage = () => {
         <section className="px-4 sm:px-6 md:px-12 lg:px-24 py-12">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent mb-6">
-                Send Message
-              </h2>
+            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6">
+              <TitleForm title="Send a Message"/>
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -193,9 +192,7 @@ const ContactPage = () => {
             <div className="space-y-8">
               {/* Contact Details */}
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl max-w-md w-full mx-auto">
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent pt-8 px-6 sm:px-8">
-                  Contact Information
-                </h2>
+                <TitleForm title="Contact Information" className="p-6"/>
 
                 {/* Content */}
                 <div className="px-6 sm:px-8 pb-8 pt-4 space-y-4">
@@ -219,9 +216,7 @@ const ContactPage = () => {
 
               {/* Social Links */}
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent mb-6">
-                  Follow Me
-                </h2>
+                <TitleForm title="Follow Me"/>
 
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => {

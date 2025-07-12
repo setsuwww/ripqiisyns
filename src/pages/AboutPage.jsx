@@ -2,6 +2,7 @@ import { MapPin, Calendar, GraduationCap } from "lucide-react"
 import "../App.css"
 import BallsBackground from "../components/Balls"
 import AboutMe from "../components/AboutMe"
+import TitleForm from "../components/TitleForm"
 
 const AboutPage = () => {
   const experiences = [
@@ -53,9 +54,7 @@ const AboutPage = () => {
           {/* Right Column - Content Section */}
           <div className="space-y-6">
             <div className="glass-effect rounded-2xl p-6" data-aos="fade-left" data-aos-duration="800">
-              <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4" data-aos="zoom-in" data-aos-delay="100">
-                Personal Info
-              </h3>
+              <TitleForm title="Personal Info" />
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3" data-aos="fade-right" data-aos-delay="200">

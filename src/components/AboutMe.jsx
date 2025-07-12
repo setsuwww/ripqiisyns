@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import Idols from "./Idols"
+import TitleForm from "./TitleForm"
 
 export default function AboutSection() {
   const [showIdols, setShowIdols] = useState(false)
@@ -11,7 +12,7 @@ export default function AboutSection() {
 
   return (
     <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">
-      <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4 md:mb-6">Did u know me?</h3>
+      <TitleForm title="Did U Know me?"/>
 
       <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
         <p>

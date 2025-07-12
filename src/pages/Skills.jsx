@@ -64,18 +64,18 @@ const SkillsPage = () => {
             >
               <div className="flex justify-between items-center mb-4">
                 <h3 className="md:hidden text-lg font-semibold text-white">{skill.nameSingkat ?? skill.name}</h3>
-                <h3 className="hidden md:inline text-lg font-semibold text-white">{skill.name}</h3>
+                <h3 className="font-pixel hidden md:inline text-lg font-semibold text-white">{skill.name}</h3>
                 <span className="text-sm font-medium text-gray-400">{skill.level}%</span>
               </div>
 
               {/* Progress Bar */}
               <div className="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
-                <div
-                  className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                  style={{
+                <div className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`} style={{
                     width: `${skill.level}%`,
                     animationDelay: `${index * 0.2}s`,
                   }}
+                  data-aos="slide-right"
+                  data-aos-duration={800 + index * 200}
                 />
               </div>
             </div>

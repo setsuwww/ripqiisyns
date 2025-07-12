@@ -1,7 +1,7 @@
 import { MapPin, Calendar, GraduationCap } from "lucide-react"
 import "../App.css"
 import BallsBackground from "../components/Balls"
-import TitleSection from "../components/TitleSection"
+import AboutMe from "../components/AboutMe"
 
 const AboutPage = () => {
   const experiences = [
@@ -94,23 +94,7 @@ const AboutPage = () => {
 
 
             {/* Bio */}
-            <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">
-              <h3 className="text-xl md:text-2xl font-bold gradient-text mb-4 md:mb-6">Did u know me?</h3>
-              <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
-                <p>
-                  I'm <span className="text-white font-semibold">Rifqi Ibrahim</span>, a passionate fullstack developer
-                  currently studying at SMK Telekomunikasi Telesandi Bekasi. My journey in web
-                  development started with curiosity about how websites work.
-                </p>
-                <p>
-                  I specialize in modern web technologies including the MERN stack MongoDB, Express.js, React.js,
-                  Node.js, and I'm also proficient in Nextjs and Laravel.
-                </p>
-                <p>
-                  I like coding, drawing, writing, and playing guitar and i want to be like Synyster gate
-                </p>
-              </div>
-            </div>
+            <AboutMe />
 
             {/* Experience */}
             <div className="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-left">
@@ -120,7 +104,7 @@ const AboutPage = () => {
                   <div key={index} className="border-l-2 border-yellow-400/30 pl-6 relative">
                     <div className="absolute w-3 h-3 bg-yellow-400 rounded-full -left-[0.5rem] top-2" data-aos="fade-up" data-aos-duration={600 + index * 200}></div>
                     <h4 className="text-lg font-semibold text-white" data-aos="fade-right" data-aos-duration={800 + index * 200}>{exp.title}</h4>
-                    <p className="text-violet-400 font-medium">{exp.company}</p>
+                    <p className="text-violet-300 font-medium" data-aos="fade-right" data-aos-duration={900 + index * 200}>{exp.company}</p>
                     <p className="text-sm text-gray-400 mb-2">{exp.period}</p>
                     <p className="text-gray-300">{exp.description}</p>
                   </div>

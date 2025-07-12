@@ -41,7 +41,7 @@ const HomePage = () => {
           <TypingEffect />
 
           {/* Description */}
-          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
+          <p className="text-md text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
             I create modern, responsive web applications using cutting-edge technologies. Passionate about clean code,
             beautiful design, and exceptional user experiences.
           </p>
@@ -49,17 +49,19 @@ const HomePage = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a href="#portofolio" data-aos="fade-right" data-aos-duration="1500"
-              className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center">
+              className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-700 text-black font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center">
               View My Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <a href="#contact" data-aos="fade-left" data-aos-duration="1500"
-              className="group glass-effect border-violet-400/50 text-violet-300 hover:bg-violet-500/10 hover:border-violet-400 px-8 py-4 rounded-full transition-all duration-300 flex items-center"
-            >
-              <Mail className="mr-2 w-5 h-5 group-hover:scale-125 transition-transform" />
-              Get In Touch
+            <a href="#contact" className="group relative px-8 py-4 rounded-full text-violet-300 font-semibold border-b-2 border-violet-800 hover:border-violet-400 group overflow-hidden z-10 bg-black/30">
+              <span className="relative z-10 flex items-center">
+                <Mail className="group-hover:scale-125 transform transition-transform mr-2 w-5 h-5" />
+                Get In Touch
+              </span>
+              <span className="absolute inset-0 rounded-full border-2 border-transparent pointer-events-none z-0 shine-border"></span>
             </a>
+
           </div>
 
         </div>

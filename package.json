@@ -12,12 +12,15 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/inter": "^5.2.6",
     "@tailwindcss/vite": "^4.1.8",
     "aos": "^2.3.4",
+    "clsx": "^2.1.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "lucide-react": "^0.513.0",
+    "motion": "^12.23.3",
     "mysql2": "^3.14.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -25,6 +28,7 @@
     "react-router-dom": "^7.6.2",
     "react-simple-typewriter": "^5.0.1",
     "sweetalert2": "^11.22.0",
+    "tailwind-variants": "^1.0.0",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {

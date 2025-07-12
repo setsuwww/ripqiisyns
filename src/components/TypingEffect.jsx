@@ -1,16 +1,18 @@
 import { Typewriter } from 'react-simple-typewriter'
+import "../App.css"
 
 export default function TypingEffect() {
   return (
     <p
-      className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light"
+      className="typing-font"
       data-aos="flip-up"
       data-aos-duration="1000"
     >
       <Typewriter
         words={[
-          'Fullstack Developer & UI/UX Designer',
-          'Javascript expert especially Nextjs and Nuxtjs',
+          'Fullstack Developer',
+          'UI/UX Designer',
+          'Nextjs, Nuxtjs & Laravel Expert',
         ]}
         loop={true}
         cursor

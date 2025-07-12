@@ -160,7 +160,7 @@ const ContactPage = () => {
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon
                     return (
-                      <a key={index} href={social.href} aria-label={social.label} className={`p-4 backdrop-blur-sm bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all duration-300 group ${social.color}`}>
+                      <a key={index} href={social.href} aria-label={social.label} className={`px-5 py-4 lg:p-4 backdrop-blur-sm bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all duration-300 group ${social.color}`}>
                         <Icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                       </a>
                     )

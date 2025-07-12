@@ -20,7 +20,7 @@ const HomePage = () => {
           <WelcomeBadge />
 
           {/* Name */}
-          <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕴𝖇𝖗𝖆𝖍𝖎𝖒" />
+          <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" />
 
           {/* Profesion */}
           <TypingEffect />

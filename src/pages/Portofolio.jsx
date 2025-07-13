@@ -72,7 +72,7 @@ const PortfolioPage = () => {
         <div className="md:hidden">
           <div className="relative">
             {/* Carousel Container */}
-            <div className="overflow-hidden" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+            <div className="overflow-hidden" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} data-aos="fade-up" data-aos-duration={1000}>
               <div className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 ref={carouselRef}
@@ -117,13 +117,13 @@ const PortfolioPage = () => {
               </div>
             </div>
 
-            <button onClick={prevSlide} disabled={currentSlide === 0}
+            <button onClick={prevSlide} disabled={currentSlide === 0} data-aos="fade-right"
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-all duration-300 z-10">
               <ChevronLeft className="w-5 h-5 text-white" />
             </button>
 
             <button
-              onClick={nextSlide} disabled={currentSlide === projects.length - 1}
+              onClick={nextSlide} disabled={currentSlide === projects.length - 1} data-aos="fade-left"
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-all duration-300 z-10">
               <ChevronRight className="w-5 h-5 text-white" />
             </button>

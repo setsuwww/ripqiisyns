@@ -1,29 +1,10 @@
 import FrameworkGrid from "../components/FrameworkGrid"
 import ListView from "../components/ListView"
 
+import { learningItems } from "../constants/learningItems"
+import { skills } from "../constants/skills"
+
 const SkillsPage = () => {
-  const skills = [
-      { name: "Next.js", level: 95, color: "from-white to-gray-400" },
-      { name: "React.js", level: 95, color: "from-sky-400 to-sky-600" },
-      { name: "Nuxt.js", level: 90, color: "from-emerald-400 to-emerald-600" },
-      { name: "Vue.js", level: 90, color: "from-green-400 to-green-600" },
-      { name: "Laravel", level: 95, color: "from-red-400 to-red-600" },
-      { name: "PHP", level: 80, color: "from-purple-400 to-purple-600" },
-      { name: "TypeScript", nameSingkat: "TS", level: 85, color: "from-blue-400 to-blue-500" },
-      { name: "JavaScript", nameSingkat: "JS", level: 90, color: "from-yellow-400 to-yellow-600" },
-  ]
-
-  const learningItems = [
-    { label: 'Next.js & Nuxt.js Feature', color: 'bg-yellow-400' },
-    { label: 'Laravel with Inertia.js', color: 'bg-red-400' },
-    { label: 'MERN & MEVN Stack Applications', color: 'bg-purple-400' },
-  ]
-
-  const availableItems = [
-    { label: 'Available for Freelance Project', color: 'bg-yellow-400' },
-    { label: 'Open to full-time oppurtinities', color: 'bg-red-400' },
-    { label: 'Response time:24 Hours', color: 'bg-purple-400' },
-  ]
 
   return (
     <div className="w-full relative min-h-screen pt-20 pb-16">
@@ -38,14 +19,14 @@ const SkillsPage = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1500">
             My <span className="gradient-text">𝕾𝖐𝖎𝖑𝖘𝖘</span>
           </h1>
           <p className="text-sm lg:text-base text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
             A comprehensive overview of my technical skills and expertise across different domains of web development.
           </p>
-        </div>
+        </header>
 
         <FrameworkGrid />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -80,7 +61,6 @@ const SkillsPage = () => {
         {/* Additional Info */}
         <div className="mt-16 grid md:grid-cols-2 gap-8">
           <ListView items={learningItems} />
-          <ListView title="Availability" items={availableItems} />
         </div>
 
       </div>

@@ -9,12 +9,12 @@ export const experiences = [
     title: "Frontend Developer",
     company: "Student",
     period: "2022 - 2023",
-    description: "Building modern web applications with React, and Tailwind CSS",
+    description: "Building modern web applications with Javascript & CSS Framework",
   },
   {
     title: "Fullstack Developer",
     company: "Student",
     period: "2023 - Present",
-    description: "Building a funcionality applications",
+    description: "Building a funcionality applications with Fullstack Framework",
   },
 ]

@@ -97,7 +97,6 @@ const Navigation = () => {
           <div className={`md:hidden absolute top-16 left-0 right-0 bg-white border-t border-white/10 rounded-bl-full shadow-md overflow-hidden z-50 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <div className="px-4 py-4 space-y-2 text-right">
               {navItems.map((item) => {
-                const Icon = item.icon
                 return (
                   <a
                     key={item.href}
@@ -109,7 +108,6 @@ const Navigation = () => {
                       }`}
                   >
                     <div className="flex items-center">
-                      <Icon size={30} />
                       <span className="text-right w-full">{item.label}</span>
                     </div>
                   </a>

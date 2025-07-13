@@ -22,6 +22,7 @@ const HomePage = () => {
           {/* Name */}
           <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" />
 
+
           {/* Profesion */}
           <TypingEffect />
 

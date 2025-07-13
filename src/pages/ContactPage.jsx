@@ -89,7 +89,7 @@ const ContactPage = () => {
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
                       <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                        placeholder="Dirman Soebardjo"
+                        placeholder="Dirman"
                       />
                     </div>
 
@@ -97,7 +97,7 @@ const ContactPage = () => {
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
                       <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                        placeholder="dirman@example.com"
+                        placeholder="dirman@exm.com"
                       />
                     </div>
                   </div>

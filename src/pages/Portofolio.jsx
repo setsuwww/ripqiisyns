@@ -72,7 +72,7 @@ const PortfolioPage = () => {
         <div className="md:hidden">
           <div className="relative">
             {/* Carousel Container */}
-            <div className="overflow-hidden" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} data-aos="fade-up">
+            <div className="overflow-hidden" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} data-aos="fade-up" data-aos-duration={1000}>
               <div className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 ref={carouselRef}

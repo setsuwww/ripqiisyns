@@ -32,9 +32,7 @@ const SkillsPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 
           {skills.map((skill, index) => (
-            <div
-              key={skill.name}
-              className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+            <div key={skill.name} className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
               data-aos="fade-down"
               data-aos-duration={400 + index * 200}
             >

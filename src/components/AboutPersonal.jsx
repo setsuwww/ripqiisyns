@@ -5,7 +5,7 @@ import TitleForm from './TitleForm'
 export default function AboutPersonal() {
   return (
     <div className="glass-effect rounded-2xl p-6" data-aos="fade-left" data-aos-duration="800">
-      <TitleForm title="Personal Info" />
+      <TitleForm title="My Personal Info" />
 
       <div className="space-y-4">
         <div className="flex items-center space-x-3" data-aos="fade-right" data-aos-delay="200">
@@ -15,7 +15,7 @@ export default function AboutPersonal() {
           <div>
             <p className="text-xs text-gray-400 uppercase tracking-wider">Location</p>
             <p className="text-gray-300 text-xs md:text-base">
-              Jl. Kp. Pulo, Sumberjaya, Kec. Tambun Selatan, Kabupaten Bekasi, Jawa Barat 17510
+              Kec. Tambun Selatan, Kabupaten Bekasi, Jawa Barat 17510
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function AboutPersonal() {
           </div>
           <div>
             <p className="text-xs text-gray-400 uppercase tracking-wider">Status</p>
-            <p className="text-gray-300 text-xs md:text-base">Available for opportunities</p>
+            <p className="text-gray-300 text-xs md:text-base">Available</p>
           </div>
         </div>
       </div>

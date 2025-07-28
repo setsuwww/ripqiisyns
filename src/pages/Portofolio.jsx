@@ -1,6 +1,7 @@
 import { useState, useRef } from "react"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 
+import '../App.css'
 import GridBackground from "../components/GridBackground"
 import BallsBackground from "../components/Balls"
 import { projects } from "../constants/projects"
@@ -79,14 +80,14 @@ const PortfolioPage = () => {
 
                       {/* Content */}
                       <div className="p-6">
-                        <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                        <h3 className="font-pixel text-xl font-bold text-white mb-3">{project.title}</h3>
                         <p className="text-gray-400 mb-6 text-sm leading-relaxed">{project.description}</p>
                         <div className="space-y-3">
                           <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built with</h4>
                           <div className="flex flex-wrap gap-2">
                             {project.technologies.map((tech, techIndex) => (
                               <div key={techIndex} className={`px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm ${techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"} bg-gradient-to-r`}>
-                                <span>{tech}</span>
+                                <span className="font-pixel">{tech}</span>
                               </div>
                             ))}
                           </div>

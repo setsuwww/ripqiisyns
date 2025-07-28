@@ -28,7 +28,7 @@ export default function PortfolioProjects() {
 
           {/* Content Section */}
           <div className="p-6">
-            <h1 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors">
+            <h1 className="font-pixel tracking-wide text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors">
               {project.title}
             </h1>
             <p className="text-gray-400 mb-6 text-sm leading-relaxed line-clamp-3">{project.description}</p>

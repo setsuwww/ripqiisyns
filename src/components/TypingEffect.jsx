@@ -2,13 +2,11 @@ import { Typewriter } from 'react-simple-typewriter'
 
 export default function TypingEffect() {
   return (
-    <p
-      className="typing-font"
+    <p className="typing-font"
       data-aos="flip-up"
       data-aos-duration="1000"
     >
-      <Typewriter
-        words={[
+      <Typewriter words={[
           'Fullstack Developer',
           'UI/UX Designer',
           'Nextjs, Nuxtjs & Laravel Expert',

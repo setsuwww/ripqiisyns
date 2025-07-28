@@ -43,40 +43,30 @@ const Navigation = () => {
   }, [])
 
   return (
-    <nav
-      className={`w-full fixed top-0 z-50 transition-all duration-300 ${scrolled ? "glass-effect shadow-lg" : "bg-transparent"
-        }`}
+    <nav className={`w-full fixed top-0 z-50 transition-all duration-300 ${scrolled ? "glass-effect shadow-lg" : "bg-transparent"}`}
       data-aos="fade-down"
       data-aos-duration="1000"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className={`max-w-7xl mx-auto transition-all duration-300 ${scrolled ? 'p-2 lg:p-3' : 'p-5 lg:p-6'}`}>
+        <div className="flex justify-between items-center">
           {/* Logo */}
-          <p className="flex items-center space-x-2 font-bold">
-            <img
-              src="/pp.jpg"
-              alt=""
-              className="size-10 object-cover lg:size-12 rounded-full"
-            />
+          <p className="flex items-center space-x-3 font-bold">
+            <img src="/pp.jpg" alt="" className="size-10 object-cover lg:size-12 rounded-full"/>
             <span className="text-xl md:text-2xl">
               𝕽𝖎𝖋𝖖𝖎<span className="gradient-text"> 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗</span>
             </span>
           </p>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-10">
             {navItems.map((item) => {
-              const Icon = item.icon
               return (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 ${activeSection === item.href.slice(1)
-                    ? "text-yellow-400 bg-white/5"
-                    : "text-gray-500 hover:text-yellow-400"
+                <a key={item.href} href={item.href}
+                  className={`flex items-center tracking-wide rounded-lg transition-all duration-300 ${activeSection === item.href.slice(1)
+                    ? "text-yellow-400"
+                    : "text-gray-500 hover:text-gray-300"
                     }`}
                 >
-                  <Icon size={18} />
                   <span>{item.label}</span>
                 </a>
               )

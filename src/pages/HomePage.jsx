@@ -5,12 +5,15 @@ import TypingEffect from "../components/TypingEffect"
 import GridBackground from "../components/GridBackground"
 import TitleSection from "../components/TitleSection"
 import WelcomeBadge from "../components/WelcomeBadge"
+import { Meteors } from "../components/magicui/meteors"
 
-const description = " I create modern, responsive web applications using cutting-edge technologies. Passionate about clean code, beautiful design, and exceptional user experiences.";
+const description = "I Create modern web applications, SEO Friendly, Semantic code and are Responsive using contemporary technology. Perfectionist about clean reusable code, beautiful UI design and Awesome UX";
 
 const HomePage = () => {
   return (
     <section className="w-full relative min-h-screen overflow-hidden">
+      <Meteors number={30} />
+
       <BallsBackground />
       <GridBackground />
 
@@ -22,19 +25,18 @@ const HomePage = () => {
           {/* Name */}
           <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" />
 
-
           {/* Profesion */}
           <TypingEffect />
 
           {/* Description of yourself */}
-          <p className="h2-responsive text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
+          <p className="shiny-text h2-responsive text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
             {description}
           </p>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a href="#portofolio" data-aos="fade-right" data-aos-duration="1500"
-              className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-700 text-black font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center">
+              className="group bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 border-0 border-b-2 border-yellow-100 hover:border-transparent text-black font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center">
               View My Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>

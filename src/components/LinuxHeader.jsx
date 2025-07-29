@@ -1,6 +1,6 @@
 export default function LinuxHeader() {
   return (
-    <div className="flex items-center justify-between space-x-2 px-6 py-3 border-b border-white/10 bg-white/5 rounded-t-2xl">
+    <div className="flex items-center justify-between space-x-2 px-7 py-3 border-b border-white/10 bg-white/5 rounded-t-2xl">
       <h1 className="text-gray-500">ContactForm.jsx</h1>
 
       <div className="flex items-center space-x-2">

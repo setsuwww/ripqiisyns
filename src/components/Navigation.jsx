@@ -1,19 +1,11 @@
 import { useState, useEffect } from "react"
-import { Menu, X, Home, User, Briefcase, Code, Mail } from "lucide-react"
-import '../App.css'
+import { Menu, X } from "lucide-react"
+import { navItems } from "../constants/navItems"
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("home")
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-
-  const navItems = [
-    { href: "#home", label: "Home", icon: Home },
-    { href: "#about", label: "About", icon: User },
-    { href: "#portofolio", label: "Portfolio", icon: Briefcase },
-    { href: "#skills", label: "Skills", icon: Code },
-    { href: "#contact", label: "Contact", icon: Mail },
-  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +39,7 @@ const Navigation = () => {
       data-aos="fade-down"
       data-aos-duration="1000"
     >
-      <div className={`max-w-7xl mx-auto transition-all duration-300 ${scrolled ? 'p-2 lg:p-3' : 'p-5 lg:p-6'}`}>
+      <div className={`max-w-7xl mx-auto transition-all duration-300 ${scrolled ? 'p-2 lg:p-3' : 'p-4 lg:p-7'}`}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <p className="flex items-center space-x-3 font-bold">

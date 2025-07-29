@@ -12,30 +12,25 @@ const description = "I Create modern web applications, SEO Friendly, Semantic co
 const HomePage = () => {
   return (
     <section className="w-full relative min-h-screen overflow-hidden">
-      <Meteors number={30} />
+      <Meteors number={10} />
 
       <BallsBackground />
       <GridBackground />
 
-      {/* Main Content */}
       <article className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center max-w-5xl mx-auto">
           <WelcomeBadge />
 
-          {/* Name */}
-          <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" />
+          <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" className="text-4xl" isHeading={true} />
 
-          {/* Profesion */}
           <TypingEffect />
 
-          {/* Description of yourself */}
-          <p className="shiny-text h2-responsive text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
+          <p className="shiny-text h2-responsive text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
             {description}
           </p>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <a href="#portofolio" data-aos="fade-right" data-aos-duration="1500"
+            <a href="#portofolio"
               className="group bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 border-0 border-b-2 border-yellow-100 hover:border-transparent text-black font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center">
               View My Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

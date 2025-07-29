@@ -7,6 +7,7 @@ import BallsBackground from "../components/Balls";
 import GridBackground from "../components/GridBackground";
 import TitleForm from "../components/TitleForm";
 import LinuxHeader from "../components/LinuxHeader";
+import TitleSection from "../components/TitleSection"
 
 import { contactInfo } from "../constants/contactInfo";
 import { socialLinks } from "../constants/socialLinks";
@@ -60,21 +61,19 @@ const ContactPage = () => {
   }
 
   return (
-    <div className="w-full relative min-h-screen pt-20 pb-16 bg-black text-white">
+    <div className="w-full relative min-h-screen pt-20 bg-black text-white">
       <BallsBackground />
       <GridBackground />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12 sm:mb-16 px-2">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-            Get <span className="bg-gradient-to-r from-yellow-400 to-violet-500 bg-clip-text text-transparent">𝕴𝖓 𝕿𝖔𝖚𝖈𝖍</span>
-          </h1>
+          <TitleSection text="Get" highlight="In Touch" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white"/>
           <p className="h2-responsive text-gray-400 max-w-3xl mx-auto">
             Have a project in mind or just want to chat? I'd love to hear from you. Let's create something amazing together!
           </p>
         </header>
 
-        <section className="px-2 sm:px-6 md:px-12 lg:px-24 py-10 sm:py-12">
+        <section className="relative px-2 sm:px-6 md:px-12 lg:px-24 py-10 sm:py-12">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
 

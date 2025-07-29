@@ -135,9 +135,9 @@
 }
 
 .shiny-text {
-  background: linear-gradient(90deg, 
+  background: linear-gradient(90deg,
     oklch(98.4% 0.003 247.858), 
-    oklch(55.4% 0.046 257.417), 
+    oklch(70.4% 0.04 256.788), 
     oklch(98.4% 0.003 247.858)
   );
   background-clip: text;

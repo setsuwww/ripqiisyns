@@ -84,16 +84,44 @@
 
   .gradient-text {
     background: linear-gradient(90deg, 
-      oklch(70.2% 0.183 293.541), 
-      oklch(70.4% 0.191 22.216), 
-      oklch(85.2% 0.199 91.936),
-      oklch(74% 0.238 322.16)
+      oklch(74.6% 0.16 232.661), 
+      oklch(71.4% 0.203 305.504), 
+      oklch(71.2% 0.194 13.428),
+      oklch(74.6% 0.16 232.661)
     );
     background-clip: text;
     color: transparent;
     background-size: 200% auto;
     -webkit-background-clip: text;
     animation: shine 5.5s linear infinite;
+  }
+}
+
+.shine-border {
+  background:
+    linear-gradient(120deg, transparent, rgba(168, 85, 247, 0.8), transparent) no-repeat;
+  background-size: 200% 200%;
+  animation: shineSweep 2s linear infinite;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  border-radius: 9999px;
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+@keyframes shineSweep {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -200% 0%;
   }
 }
 

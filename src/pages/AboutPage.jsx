@@ -34,9 +34,9 @@ const AboutPage = () => {
                   <div key={index} className="border-l-2 border-yellow-400/30 pl-6 relative">
                     <div className="absolute w-3 h-3 bg-yellow-400 rounded-full -left-[0.4rem] top-2" data-aos="fade-up" data-aos-duration={600 + index * 200}></div>
                     <h4 className="font-pixel tracking-wide text-lg font-semibold text-white" data-aos="fade-right" data-aos-duration={800 + index * 200}>{exp.title}</h4>
-                    <p className="text-violet-300 font-medium" data-aos="fade-right" data-aos-duration={900 + index * 200}>{exp.company}</p>
+                    <p className="text-violet-300 text-xs md:text-sm font-medium" data-aos="fade-right" data-aos-duration={900 + index * 200}>{exp.company}</p>
                     <p className="text-gray-400 mb-2 text-sm md:text-base">{exp.period}</p>
-                    <p className="text-gray-300 text-xs md:text-base">{exp.description}</p>
+                    <p className="text-gray-300 text-xs md:text-sm">{exp.description}</p>
                   </div>
                 ))}
               </div>

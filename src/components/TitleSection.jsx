@@ -9,7 +9,7 @@ export default function TitleSection({
       className={`
         font-bold mb-6 text-white ${className}
         ${isHeading
-          ? 'text-6xl sm:text-7xl lg:text-8xl'
+          ? 'text-5xl sm:text-6xl lg:text-7xl'
           : 'text-4xl sm:text-5xl lg:text-6xl'}
       `}
     >

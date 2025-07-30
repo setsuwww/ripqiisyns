@@ -4,10 +4,9 @@ import { infoList } from '../constants/infoList'
 
 function InfoRow({ icon: Icon, label, value, color, animation, delay }) {
   return (
-    <div className="flex items-center space-x-3" data-aos={animation} data-aos-delay={delay}
-    >
-      <div className={`p-2 rounded-full bg-${color}-400/20 flex-shrink-0`}>
-        <Icon className={`w-5 h-5 text-${color}-400`} />
+    <div className="flex items-center space-x-3" data-aos={animation} data-aos-delay={delay}>
+      <div className={`p-2 rounded-full ${color} flex-shrink-0`}>
+        <Icon className={`w-5 h-5`} />
       </div>
       <div>
         <p className="text-xs text-gray-400 uppercase tracking-wider">{label}</p>

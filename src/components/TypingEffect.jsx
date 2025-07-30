@@ -10,8 +10,8 @@ export default function TypingEffect() {
         loop={true}
         cursor
         cursorStyle="|"
-        typeSpeed={80}
-        deleteSpeed={50}
+        typeSpeed={30}
+        deleteSpeed={30}
         delaySpeed={1500}
       />
     </p>

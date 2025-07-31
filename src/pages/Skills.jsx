@@ -10,7 +10,7 @@ const SkillsPage = () => {
   return (
     <>
       <SEOHeader
-        title="Rifqi Synyster | Skills"
+        title="Rifqi Synyster"
         description="Skills Page references"
         url="https://ripqiisyns.vercel.app"
         image="/pp.jpg"

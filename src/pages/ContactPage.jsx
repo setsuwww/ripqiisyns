@@ -62,7 +62,7 @@ const ContactPage = () => {
   return (
     <>
     <SEOHeader 
-      title="Rifqi Synyster | Contact"
+      title="Rifqi Synyster"
       description="Contact Page references"
       url="https://ripqiisyns.vercel.app"
       image="/pp.jpg"

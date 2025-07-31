@@ -47,7 +47,7 @@ export default function PortfolioPage() {
   return (
     <>
       <SEOHeader
-        title="Rifqi Synyster | Portfolio"
+        title="Rifqi Synyster"
         description="Portfolio Page references"
         url="https://ripqiisyns.vercel.app"
         image="/pp.jpg"

@@ -12,7 +12,7 @@ const AboutPage = () => {
     <main className="w-full relative min-h-screen pt-20 pb-16">
 
       <SEOHeader
-        title="Rifqi Synyster | About"
+        title="Rifqi Synyster"
         description="About Page references"
         url="https://ripqiisyns.vercel.app"
         image="/pp.jpg"

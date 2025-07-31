@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <>
       <SEOHeader
-        title="Rifqi Synyster | Home"
+        title="Rifqi Synyster"
         description={description}
         url="https://ripqiisyns.vercel.app"
         image="/pp.jpg"

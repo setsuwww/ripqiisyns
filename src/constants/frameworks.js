@@ -3,7 +3,7 @@ import { SiNextdotjs, SiNuxtdotjs, SiLaravel } from 'react-icons/si'
 export const frameworks = [
   {
     Icon: SiNextdotjs,
-    title: 'Next.js',
+    title: 'Nextjs',
     color: 'text-white',
     bg: 'bg-white/10',
     border: '',
@@ -13,7 +13,7 @@ export const frameworks = [
   },
   {
     Icon: SiNuxtdotjs,
-    title: 'Nuxt.js',
+    title: 'Nuxtjs',
     color: 'text-emerald-300',
     bg: 'bg-emerald-500/10',
     border: 'border-b-1 border-emerald-500/20',

@@ -3,14 +3,13 @@ import { useRef, useState } from "react";
 import { Send } from "lucide-react"
 import Swal from "sweetalert2";
 
-import BallsBackground from "../components/Balls";
+import BallsBackground from "../components/SoftGradients";
 import GridBackground from "../components/GridBackground";
-import TitleForm from "../components/TitleForm";
+import TitleForm from "../components/FormTitle";
 import LinuxHeader from "../components/LinuxHeader";
-import TitleSection from "../components/TitleSection"
+import TitleSection from "../components/PageTitle"
 
-import { contactInfo } from "../constants/contactInfo";
-import { socialLinks } from "../constants/socialLinks";
+import SEOHeader from "@/components/SEO/SEOHeader";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -43,16 +42,16 @@ const ContactPage = () => {
       .then(() => {
         Swal.fire({
           icon: "success",
-          title: "Waww Apatuchh!",
-          text: "Pesannya nanti gw baca, gw kan ga Seleb",
+          title: "Waww, Thankyou!",
+          text: "I'll read ur Message, see you",
         })
         setFormData({ name: "", email: "", message: "" })
       })
       .catch(() => {
         Swal.fire({
           icon: "error",
-          title: "Gagal, Error Cik",
-          text: "Pesannya gagal dikirim.",
+          title: "Oops, Sorry",
+          text: "The message isn't send check your Connection",
         })
       })
       .finally(() => {
@@ -61,7 +60,14 @@ const ContactPage = () => {
   }
 
   return (
-    <div className="w-full relative min-h-screen pt-20 bg-black text-white">
+    <>
+    <SEOHeader 
+      title="Rifqi Synyster | Contact"
+      description="Contact Page references"
+      url="https://ripqiisyns.vercel.app"
+      image="/pp.jpg"
+    />
+    <main className="w-full relative min-h-screen pt-20 bg-black text-white">
       <BallsBackground />
       <GridBackground />
 
@@ -74,12 +80,12 @@ const ContactPage = () => {
         </header>
 
         <section className="relative px-2 sm:px-6 md:px-12 lg:px-24 py-10 sm:py-12">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
+          <div className="grid gap-10 lg:gap-12">
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
 
               <LinuxHeader />
 
-              <div className="p-6 md:p-6">
+              <div className="p-6 md:p-10">
                 <TitleForm title="Send a Message" />
 
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 mt-4">
@@ -87,7 +93,7 @@ const ContactPage = () => {
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
                       <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
+                        className="input"
                         placeholder="Dirman"
                       />
                     </div>
@@ -95,8 +101,8 @@ const ContactPage = () => {
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
                       <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-400/50 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                        placeholder="dirman@exm.com"
+                        className="input"
+                        placeholder="dirman@gmail.com"
                       />
                     </div>
                   </div>
@@ -104,12 +110,12 @@ const ContactPage = () => {
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                     <textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400/50 focus:border-transparent text-white placeholder-gray-400 resize-none transition-all duration-300"
+                      className="input"
                       placeholder="You're free to say whatever you..."
                     />
                   </div>
 
-                  <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-yellow-400 to-violet-500 hover:from-yellow-500 hover:to-violet-600 text-black font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                  <button type="submit" disabled={isSubmitting} className="w-full bg-gray-500/20 hover:bg-gray-500/30 font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">
                     {isSubmitting ? (
                       <>
                         <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
@@ -126,52 +132,11 @@ const ContactPage = () => {
               </div>
             </div>
 
-
-            {/* Contact Info + Socials */}
-            <div className="space-y-8">
-              {/* Contact Info */}
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl max-w-full w-full mx-auto p-6 sm:p-6">
-                <TitleForm title="Contact Information" />
-
-                <div className="space-y-4">
-                  {contactInfo.map((info, index) => {
-                    const Icon = info.icon
-                    return (
-                      <a key={index} href={info.href} className="flex items-center space-x-4 p-2 rounded-lg transition-all duration-300 group">
-                        <div className={`p-3 rounded-full bg-white/10 ${info.color} group-hover:scale-110 transition-transform duration-300`}>
-                          <Icon className="w-6 h-6" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-400">{info.label}</p>
-                          <p className="text-white font-medium">{info.value}</p>
-                        </div>
-                      </a>
-                    )
-                  })}
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6">
-                <TitleForm title="Follow Me" />
-
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-2">
-                  {socialLinks.map((social, index) => {
-                    const Icon = social.icon
-                    return (
-                      <a key={index} href={social.href} aria-label={social.label} className={`px-5 py-4 lg:p-4 backdrop-blur-sm bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all duration-300 group ${social.color}`}>
-                        <Icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-                      </a>
-                    )
-                  })}
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </div>
-    </div>
-
+    </main>
+    </>
   )
 }
 

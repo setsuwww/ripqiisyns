@@ -10,25 +10,25 @@ export default function Footer() {
           {/* Copyright */}
           <div className="flex justify-center items-center space-x-2 text-gray-400 text-sm">
             <span>© {year}</span>
-            <span className="font-medium gradient-text">Rifqi Synyster</span>
+            <span className="font-semibold gradient-text">Rifqi Synyster</span>
             <span>All rights reserved.</span>
           </div>
 
           {/* Made with love */}
           <div className="flex justify-center items-center mt-3 space-x-2 text-xs text-gray-500">
             <span>Made with</span>
-            <Heart className="w-3 h-3 text-red-400 animate-pulse" />
+            <Heart className="w-3 h-3 text-rose-400 animate-pulse" />
             <span>by a passionate developer</span>
           </div>
 
           {/* Line */}
           <div className="mt-6 flex justify-center">
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent" />
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent" />
           </div>
         </div>
 
         {/* Bottom Glow Line */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-sky-400/30 to-transparent" />
       </div>
     </footer>
   )

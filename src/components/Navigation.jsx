@@ -85,8 +85,8 @@ const Navigation = () => {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={`flex justify-end items-center font-semibold space-x-2 px-4 py-3 transition-all duration-300 border-0 border-r-4 border-transparent rounded-l-full ${activeSection === item.href.slice(1)
-                        ? 'text-yellow-400'
-                        : 'text-gray-500 cursor-pointer hover:text-yellow-500'
+                        ? 'text-sky-400'
+                        : 'text-gray-500 cursor-pointer hover:text-sky-500'
                       }`}
                   >
                     <div className="flex items-center">

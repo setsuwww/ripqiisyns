@@ -8,7 +8,7 @@ export default function ModalViewer({ isOpen, onClose, onNext, onPrev, project }
       <button className="absolute top-4 right-4 text-white text-3xl" onClick={onClose}><X /></button>
       <button className="absolute left-4 text-white text-2xl" onClick={onPrev}><ChevronLeft /></button>
       <button className="absolute right-4 text-white text-2xl" onClick={onNext}><ChevronRight /></button>
-      <img src={project.image} alt="Preview" className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg" />
+      <img src={project.image} alt={project.image} className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg" />
     </div>
   )
 }

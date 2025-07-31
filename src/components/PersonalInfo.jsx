@@ -1,10 +1,10 @@
-import TitleForm from './TitleForm'
+import TitleForm from './FormTitle'
 
 import { infoList } from '../constants/infoList'
 
 function InfoRow({ icon: Icon, label, value, color, animation, delay }) {
   return (
-    <div className="flex items-center space-x-3" data-aos={animation} data-aos-delay={delay}>
+    <div aria-label='Card Personal' className="flex items-center space-x-3" data-aos={animation} data-aos-delay={delay}>
       <div className={`p-2 rounded-full ${color} flex-shrink-0`}>
         <Icon className={`w-5 h-5`} />
       </div>

@@ -1,7 +1,7 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import './main.css'
+import './App.css'
 
 import Navigation from './components/Navigation.jsx'
 
@@ -28,7 +28,7 @@ const UserLayout = () => {
         <AboutPage />
       </section>
 
-      <section id="portofolio" className="w-full">
+      <section id="portfolio" className="w-full">
         <PortfolioPage />
       </section>
 

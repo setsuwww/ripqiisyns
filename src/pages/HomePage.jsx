@@ -1,41 +1,52 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
-
-import BallsBackground from "../components/Balls"
-import TypingEffect from "../components/TypingEffect"
+import BallsBackground from "../components/SoftGradients"
+import TypingEffect from "../components/ProfessionTyping"
 import GridBackground from "../components/GridBackground"
-import TitleSection from "../components/TitleSection"
+import TitleSection from "../components/PageTitle"
 import WelcomeBadge from "../components/WelcomeBadge"
 import { Meteors } from "../components/magicui/meteors"
 import ActionButtons from "../components/ActionButton"
 
-const description = "I Create modern web applications, SEO Friendly, Semantic code and are Responsive using contemporary technology. Perfectionist about clean reusable code, beautiful UI design and Awesome UX";
+import SEOHeader from "../components/SEO/SEOHeader"
+
+const description = "I create modern web applications, SEO friendly, semantic code, and responsive designs using contemporary technology. Perfectionist about clean reusable code, beautiful UI design, and awesome UX."
 
 const HomePage = () => {
   return (
-    <section className="w-full relative min-h-screen overflow-hidden">
-      <Meteors number={10} />
+    <>
+      <SEOHeader
+        title="Rifqi Synyster | Home"
+        description={description}
+        url="https://ripqiisyns.vercel.app"
+        image="/pp.jpg"
+      />
 
-      <BallsBackground />
-      <GridBackground />
+      <section className="w-full relative min-h-screen overflow-hidden">
+        <Meteors number={10} />
+        <BallsBackground />
+        <GridBackground />
 
-      <article className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="text-center max-w-5xl mx-auto">
-          <WelcomeBadge />
+        <main className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-16">
+          <div className="text-center max-w-5xl mx-auto">
+            <WelcomeBadge />
 
-          <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" className="text-4xl" isHeading={true} />
+            <header>
+              <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" className="text-4xl" isHeading={true} />
+              <TypingEffect />
+            </header>
 
-          <TypingEffect />
+            <section aria-label="Description" className="mt-6">
+              <p className="shiny-text h2-responsive text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                {description}
+              </p>
+            </section>
 
-          <p className="shiny-text h2-responsive text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            {description}
-          </p>
-
-          <ActionButtons />
-
-        </div>
-      </article>
-
-    </section>
+            <nav aria-label="Call to action buttons">
+              <ActionButtons />
+            </nav>
+          </div>
+        </main>
+      </section>
+    </>
   )
 }
 

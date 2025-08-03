@@ -1,9 +1,10 @@
+import React from "react";
 import { techColors } from "../constants/techColor";
 
-export default function CarouselCard({ project, onClick }) {
+const CarouselCard = React.memo(function CarouselCard({ project, onClick }) {
   return (
     <div className="w-full flex-shrink-0 px-4">
-      <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
+      <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
         <picture className="relative overflow-hidden cursor-pointer" onClick={onClick}>
           <img loading="lazy"
             src={project.image || "/placeholder.svg"}
@@ -32,4 +33,6 @@ export default function CarouselCard({ project, onClick }) {
       </div>
     </div>
   )
-}
+})
+
+export default CarouselCard

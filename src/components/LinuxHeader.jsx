@@ -13,14 +13,14 @@ export default function LinuxHeader() {
 
   return (
     <div className="flex items-center justify-between space-x-2 py-3 px-6 md:px-10 border-b border-white/10 bg-white/5 rounded-t-2xl">
-      <h1 className="text-gray-500">ContactForm.jsx</h1>
+      <h1 className="font-pixel text-gray-500">ContactForm.jsx</h1>
 
       <div className="flex items-center space-x-2">
         <span className="w-4 h-4 bg-green-400 rounded-full" />
         <span className="w-4 h-4 bg-yellow-400 rounded-full" />
         
         {/* Tombol X */}
-        <button onClick={handleClose} className="w-4 h-4 bg-rose-400 rounded-full flex items-center justify-center text-[10px] text-rose-100 hover:bg-rose-500 transition-all" title="Close?">
+        <button onClick={handleClose} className="w-4 h-4 bg-rose-400 rounded-full flex items-center justify-center text-[8px] text-rose-100 hover:bg-rose-500 transition-all" title="Close?">
           <span className='text-white font-semibold text-base'>×</span>
         </button>
       </div>

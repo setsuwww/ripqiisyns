@@ -35,17 +35,17 @@ const Navigation = () => {
   }, [])
 
   return (
-    <nav className={`w-full fixed top-0 z-50 transition-all duration-300 ${scrolled ? "glass-effect shadow-lg" : "bg-transparent"}`}
+    <nav className={`w-full fixed top-0 z-50 transition-all duration-300 ${scrolled ? "glass-effect backdrop-blur-sm shadow-lg" : "bg-transparent"}`}
       data-aos="fade-down"
       data-aos-duration="1000"
     >
       <div className={`max-w-7xl mx-auto transition-all duration-300 ${scrolled ? 'p-2 lg:p-3' : 'p-4 lg:p-7'}`}>
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <p className="flex items-center space-x-3 font-bold">
-            <img src="/pp.jpg" alt="" className="size-10 object-cover lg:size-12 rounded-full"/>
-            <span className="text-xl md:text-2xl">
-              𝕽𝖎𝖋𝖖𝖎<span className="gradient-text"> 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗</span>
+          <p className="font-pixel flex items-center space-x-3 font-bold">
+            <img src="/pp.webp" alt="" className="size-10 object-cover lg:size-12 rounded-full"/>
+            <span className="text-md md:text-lg">
+              Rifqi<span className="gradient-text"> Synyster</span>
             </span>
           </p>
 
@@ -66,9 +66,8 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+          <button onClick={() => setIsOpen(!isOpen)}
+            className={`md:hidden p-2 rounded-lg transition-all ${isOpen ? "text-rose-400 bg-rose-500/10" : "text-sky-400 bg-sky-500/10"} `}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

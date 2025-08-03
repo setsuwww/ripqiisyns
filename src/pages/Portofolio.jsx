@@ -58,10 +58,10 @@ export default function PortfolioPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-16">
-            <TitleSection text="My" highlight="Portfolio" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white" />
-            <p className="text-sm lg:text-base text-gray-400 max-w-3xl mx-auto" data-aos="fade-up">
-              A collection of projects that showcase my skills and passion for creating amazing digital experiences.
-            </p>
+            <TitleSection 
+              text="My" highlight="Portfolio"
+              description="A collection of projects that showcase my skills and passion for creating amazing digital experiences."
+            />
           </header>
 
           {/* Desktop Grid */}

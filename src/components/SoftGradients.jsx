@@ -1,9 +1,19 @@
-export default function BallsBackground() {
+import React, { useMemo } from 'react'
+
+const BallsBackground = () => {
+  const balls = useMemo(() => [
+    { className: 'top-1/4 left-1/4 w-72 h-72 bg-sky-300/10 blur-3xl' },
+    { className: 'bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/10 blur-3xl' },
+    { className: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-rose-400/10 blur-2xl' },
+  ], [])
+
   return (
-    <div className="absolute inset-0">
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-sky-300/10 rounded-full blur-3xl" data-aos="zoom-in" data-aos-duration="1500" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl" data-aos="zoom-in" data-aos-duration="1500"/>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-rose-400/10 rounded-full blur-2xl" data-aos="zoom-in" data-aos-duration="1500" />
+    <div className="absolute inset-0 pointer-events-none z-0">
+      {balls.map((b, i) => (
+        <div key={i} className={`absolute rounded-full ${b.className} transform`}/>
+      ))}
     </div>
   )
 }
+
+export default React.memo(BallsBackground)

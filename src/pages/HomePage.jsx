@@ -30,12 +30,12 @@ const HomePage = () => {
             <WelcomeBadge />
 
             <header>
-              <TitleSection text="Hi I'm" highlight="𝕽𝖎𝖋𝖖𝖎 𝕾𝖞𝖓𝖞𝖘𝖙𝖊𝖗" className="text-4xl" isHeading={true} />
+              <TitleSection text="Hi I'm" highlight="Rifqi Synyster" isHeading={true} />
               <TypingEffect />
             </header>
 
             <section aria-label="Description" className="mt-6">
-              <p className="shiny-text h2-responsive text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+              <p className="shiny-text text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                 {description}
               </p>
             </section>

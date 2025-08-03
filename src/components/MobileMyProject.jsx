@@ -13,19 +13,17 @@ export default function CarouselCard({ project, onClick }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </picture>
         <div className="p-6">
-          <h3 className="font-pixel text-xl font-bold text-white mb-3">{project.title}</h3>
-          <p className="text-gray-400 mb-6 text-sm leading-relaxed">{project.description}</p>
+          <h3 className="text-base md:text-lg font-bold text-white mb-3">{project.title}</h3>
+          <p className="text-gray-400 mb-6 text-xs md:text-sm leading-relaxed">{project.description}</p>
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built wisth</h4>
+            <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built with</h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, i) => (
-                <div
-                  key={i}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm ${
+                <div key={i} className={`px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm ${
                     techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"
                   } bg-gradient-to-r`}
                 >
-                  <span className="font-pixel">{tech}</span>
+                  <span className="">{tech}</span>
                 </div>
               ))}
             </div>

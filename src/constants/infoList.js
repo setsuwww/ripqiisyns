@@ -6,7 +6,7 @@ export const infoList = [
     label: 'Location',
     value: 'Kec. Tambun Selatan, Kabupaten Bekasi, Jawa Barat 17510',
     color: 'text-sky-400 bg-sky-400/20',
-    animation: 'fade-right',
+    animation: 'fade-down',
     delay: 200,
   },
   {
@@ -14,7 +14,7 @@ export const infoList = [
     label: 'Education',
     value: 'SMK Telekomunikasi Telesandi Bekasi',
     color: 'text-violet-400 bg-violet-400/20',
-    animation: 'fade-up',
+    animation: 'fade-down',
     delay: 300,
   },
   {
@@ -22,7 +22,7 @@ export const infoList = [
     label: 'Status',
     value: 'Available',
     color: 'text-rose-400 bg-rose-400/20',
-    animation: 'fade-left',
+    animation: 'fade-down',
     delay: 400,
   },
 ]

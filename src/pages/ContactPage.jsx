@@ -73,10 +73,10 @@ const ContactPage = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12 sm:mb-16 px-2">
-          <TitleSection text="Get" highlight="In Touch" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white"/>
-          <p className="h2-responsive text-gray-400 max-w-3xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you. Let's create something amazing together!
-          </p>
+          <TitleSection 
+            text="Get" highlight="In Touch"
+            description="Have a project in mind or just want to chat? I'd love to hear from you. Let's create something amazing together!"
+          />
         </header>
 
         <section className="relative px-2 sm:px-6 md:px-12 lg:px-24 py-10 sm:py-12">

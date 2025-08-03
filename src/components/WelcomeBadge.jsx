@@ -5,7 +5,7 @@ export default function WelcomeBadge() {
         <div className="absolute inset-0 rounded-full bg-green-400 opacity-75 animate-ping" />
         <div className="relative w-full h-full rounded-full bg-green-400 animate-pulse" />
       </div>
-      <span className="font-pixel text-sm font-semibold text-green-400">Available</span>
+      <span className="text-sm font-semibold text-green-400">Available</span>
     </div>
   )
 }

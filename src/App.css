@@ -3,23 +3,28 @@
 /* === Fonts === */
 @font-face {
   font-family: 'InstrumentSans';
-  src: url('/fonts/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/InstrumentSans-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'BitcountPropSingle';
-  src: url('/fonts/BitcountPropSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf') format('truetype');
+  src: url('/fonts/BitcountPropSingle-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Audiowide';
-  src: url('/fonts/Audiowide-Regular.ttf') format('truetype');
+  src: url('/fonts/Audiowide-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Orbitron';
-  src: url('/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/Orbitron-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
 }
 @font-face {
   font-family: 'Michroma';
-  src: url('/fonts/Michroma-Regular.ttf') format('truetype');
+  src: url('/fonts/Michroma-Regular.woff2') format('woff2');
 }
 
 /* === Base Layer === */
@@ -102,6 +107,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     background-size: 200% auto;
     animation: shine 5.5s linear infinite;
   }
@@ -189,4 +195,18 @@
 .animate-grid {
   animation: gridMove 5s linear infinite;
 }
+
+.animate-tech-colors {
+  @apply translate-x-[-100%] group-hover/badge:translate-x-[100%] transition-transform duration-700;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
 

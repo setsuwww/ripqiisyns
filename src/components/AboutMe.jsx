@@ -13,6 +13,7 @@ export default function AboutSection() {
             {text}
           </p>
         ))}
+        {/* Tambahin link ke Website buat pamerin karya */}
       </article>
     </section>
   )

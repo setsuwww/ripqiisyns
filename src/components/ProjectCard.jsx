@@ -33,7 +33,7 @@ const ProjectCard = React.memo(function ProjectCard({ project, index, onClick })
                 key={techIndex}
                 className={`group/badge relative overflow-hidden px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg ${techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"} bg-gradient-to-r cursor-pointer`}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover/badge:translate-x-[100%] transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 animate-tech-colors" />
                 <span className="relative z-10">{tech}</span>
               </div>
             ))}

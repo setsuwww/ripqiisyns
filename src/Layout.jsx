@@ -15,10 +15,10 @@ import { SectionLoader } from './components/SectionLoader'
 
 const UserLayout = () => {
   return (
-    <div className="overflow-x-hidden">
-      <Navigation />
+    <Suspense fallback={<SectionLoader />}>
+      <div className="overflow-x-hidden">
+        <Navigation />
 
-      <Suspense fallback={<SectionLoader />}>
         <section id="home" className="w-full">
           <HomePage />
         </section>
@@ -38,10 +38,10 @@ const UserLayout = () => {
         <section id="contact" className="w-full">
           <ContactPage />
         </section>
-      </Suspense>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Suspense>
   )
 }
 export default UserLayout

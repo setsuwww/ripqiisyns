@@ -27,8 +27,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Glow Line */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-sky-400/30 to-transparent" />
       </div>
     </footer>
   )

@@ -18,7 +18,7 @@ function InfoRow({ icon: Icon, label, value, color, animation, delay }) {
 
 export default function AboutPersonal() {
   return (
-    <div className="glass-effect rounded-2xl p-6" data-aos="fade-left" data-aos-duration="800">
+    <div className="glass-effect rounded-2xl p-6" data-aos="fade-left">
       <TitleForm title="My Personal Info" />
       <div className="space-y-4">
         {infoList.map((item, i) => (

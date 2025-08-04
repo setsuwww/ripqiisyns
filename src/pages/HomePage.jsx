@@ -35,7 +35,7 @@ const HomePage = () => {
             </header>
 
             <section aria-label="Description" className="mt-6">
-              <p className="shiny-text text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                 {description}
               </p>
             </section>

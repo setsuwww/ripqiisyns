@@ -4,14 +4,14 @@ import { techColors } from "../constants/techColor";
 const CarouselCard = React.memo(function CarouselCard({ project, onClick }) {
   return (
     <div className="w-full flex-shrink-0 px-4">
-      <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+      <div className="bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
         <picture className="relative overflow-hidden cursor-pointer" onClick={onClick}>
           <img loading="lazy"
             src={project.image || "/placeholder.svg"}
             alt={project.title}
             className="w-full h-48 object-cover transition-transform duration-300"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </picture>
         <div className="p-6">
           <h3 className="text-base md:text-lg font-bold text-white mb-3">{project.title}</h3>
@@ -20,7 +20,7 @@ const CarouselCard = React.memo(function CarouselCard({ project, onClick }) {
             <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built with</h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, i) => (
-                <div key={i} className={`px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm ${
+                <div key={i} className={`px-3 py-1.5 text-xs font-medium rounded-full border ${
                     techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"
                   } bg-gradient-to-r`}
                 >

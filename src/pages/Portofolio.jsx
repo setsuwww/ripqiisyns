@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import GridBackground from "../components/GridBackground"
 import BallsBackground from "../components/SoftGradients"
 import PortfolioProjects from "../components/MyProject"
@@ -20,8 +20,8 @@ export default function PortfolioPage() {
   const [startX, setStartX] = useState(null)
   const [endX, setEndX] = useState(null)
 
-  const nextSlide = () => setCurrentSlide((p) => (p + 1) % projects.length)
-  const prevSlide = () => setCurrentSlide((p) => (p - 1 + projects.length) % projects.length)
+  const nextSlide = useCallback(() => setCurrentSlide((p) => (p + 1) % projects.length), [])
+  const prevSlide = useCallback(() => setCurrentSlide((p) => (p - 1 + projects.length) % projects.length), [])
   const nextModal = () => setModalIndex((p) => (p + 1) % projects.length)
   const prevModal = () => setModalIndex((p) => (p - 1 + projects.length) % projects.length)
 
@@ -71,8 +71,8 @@ export default function PortfolioPage() {
 
           {/* Mobile Carousel */}
           <div className="md:hidden relative">
-            <div className="overflow-hidden" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} data-aos="fade-up">
-              <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            <div className="overflow-hidden" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} >
+              <div className="flex transition-transform" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                 {projects.map((project, i) => (
                   <CarouselCard key={project.id} project={project} onClick={() => openModal(i)} />
                 ))}

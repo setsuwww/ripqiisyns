@@ -30,7 +30,7 @@ const SkillsPage = () => {
 
           <FrameworkGrid />
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" data-aos="zoom-out">
             {memoSkills.map((skill, index) => (
               <SkillBar
                 key={skill.name}

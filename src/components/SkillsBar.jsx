@@ -1,12 +1,8 @@
 import React from "react"
 
-const SkillBar = React.memo(({ name, nameSingkat, level, color, index }) => {
+const SkillBar = React.memo(({ name, nameSingkat, level, color }) => {
   return (
-    <div
-      className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
-      data-aos="fade-down"
-      data-aos-duration={400 + index * 200}
-    >
+    <div className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
       <div className="flex justify-between items-center mb-4">
         <h3 className="md:hidden font-pixel text-base font-semibold text-white">{nameSingkat ?? name}</h3>
         <h3 className="hidden md:inline font-pixel text-base font-semibold text-white">{name}</h3>
@@ -14,11 +10,9 @@ const SkillBar = React.memo(({ name, nameSingkat, level, color, index }) => {
       </div>
 
       <div className="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
-        <div
-          className={`h-full bg-gradient-to-r ${color} rounded-full transition-all duration-1000 ease-out`}
+        <div className={`h-full bg-gradient-to-r ${color} rounded-full`}
           style={{
             width: `${level}%`,
-            animationDelay: `${index * 0.2}s`,
           }}
         />
       </div>
@@ -26,4 +20,4 @@ const SkillBar = React.memo(({ name, nameSingkat, level, color, index }) => {
   )
 })
 
-export default SkillBar
+export default React.memo(SkillBar)

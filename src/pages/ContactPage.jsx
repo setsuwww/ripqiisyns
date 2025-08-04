@@ -115,7 +115,7 @@ const ContactPage = () => {
                     />
                   </div>
 
-                  <button type="submit" disabled={isSubmitting} className="w-full bg-gray-500/20 hover:bg-gray-500/30 font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                  <button type="submit" disabled={isSubmitting} className="w-full bg-gray-500/20 hover:bg-gray-500/30 font-semibold py-4 px-6 rounded-lg transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">
                     {isSubmitting ? (
                       <>
                         <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />

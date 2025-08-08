@@ -1,11 +1,6 @@
 import React from "react"
 
-const TitleSection = ({
-  text,
-  highlight,
-  isHeading = false,
-  description = "", // default kosong, opsional
-}) => {
+const TitleSection = ({ text, highlight, isHeading = false, description = ""}) => {
   return (
     <>
       <h1 className={`font-extrabold mb-6 text-white

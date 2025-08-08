@@ -2,7 +2,9 @@ import TitleForm from './FormTitle'
 
 import { infoList } from '../constants/infoList'
 
-function InfoRow({ icon: Icon, label, value, color, animation, delay }) {
+function InfoRow({ icon, label, value, color, animation, delay }) {
+  const Icon = icon;
+  
   return (
     <div aria-label='Card Personal' className="flex items-center space-x-3" data-aos={animation} data-aos-delay={delay}>
       <div className={`p-2 rounded-full ${color} flex-shrink-0`}>

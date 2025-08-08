@@ -2,13 +2,7 @@ import Swal from 'sweetalert2'
 
 export default function LinuxHeader() {
   const handleClose = () => {
-    Swal.fire({
-      icon: 'question',
-      title: 'Why u close it?',
-      text: 'This is my fun effect for the Swalfire test',
-      confirmButtonColor: '#6366f1',
-      confirmButtonText: 'Wkwkwk',
-    })
+    Swal.fire({ icon: 'question', title: 'Why u close it?', text: 'This is my fun effect for the Swalfire test', confirmButtonColor: '#6366f1', confirmButtonText: 'Wkwkwk'})
   }
 
   return (
@@ -19,7 +13,6 @@ export default function LinuxHeader() {
         <span className="w-4 h-4 bg-green-400 rounded-full" />
         <span className="w-4 h-4 bg-yellow-400 rounded-full" />
         
-        {/* Tombol X */}
         <button onClick={handleClose} className="w-4 h-4 bg-rose-400 rounded-full flex items-center justify-center text-[8px] text-rose-100 hover:bg-rose-500 transition-all" title="Close?">
           <span className='text-white font-semibold text-base'>×</span>
         </button>

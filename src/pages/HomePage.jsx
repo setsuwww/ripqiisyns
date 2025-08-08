@@ -5,7 +5,6 @@ import TitleSection from "../components/PageTitle"
 import WelcomeBadge from "../components/WelcomeBadge"
 import { Meteors } from "../components/magicui/meteors"
 import ActionButtons from "../components/ActionButton"
-
 import SEOHeader from "../components/SEO/SEOHeader"
 
 const description = "I create modern web applications, SEO friendly, semantic code, and responsive designs using contemporary technology. Perfectionist about clean reusable code, beautiful UI design, and awesome UX."
@@ -13,12 +12,7 @@ const description = "I create modern web applications, SEO friendly, semantic co
 const HomePage = () => {
   return (
     <>
-      <SEOHeader
-        title="Rifqi Synyster"
-        description={description}
-        url="https://ripqiisyns.vercel.app"
-        image="/pp.jpg"
-      />
+      <SEOHeader title="Rifqi Synyster" description={description} url="https://ripqiisyns.vercel.app" image="/pp.jpg"/>
 
       <section className="w-full relative min-h-screen overflow-hidden">
         <Meteors number={10} />

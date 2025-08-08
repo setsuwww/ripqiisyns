@@ -1,4 +1,3 @@
-// ProjectCard.tsx
 import React from "react"
 import { techColors } from "../constants/techColor"
 
@@ -23,8 +22,7 @@ const ProjectCard = React.memo(function ProjectCard({ project, index, onClick })
           <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built with</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech, techIndex) => (
-              <div key={techIndex}
-                className={`group/badge relative overflow-hidden px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm transition-all hover:scale-105
+              <div key={techIndex} className={`group/badge relative overflow-hidden px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm transition-all hover:scale-105
                    ${techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"} bg-gradient-to-r cursor-pointer`}
               >
                 <span className="relative z-10">{tech}</span>

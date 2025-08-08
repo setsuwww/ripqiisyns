@@ -1,60 +1,35 @@
 @import "tailwindcss";
 
-/* === Fonts === */
-@font-face {
-  font-family: 'InstrumentSans';
+@font-face { font-family: 'InstrumentSans';
   src: url('/fonts/InstrumentSans-Regular.woff2') format('woff2');
 }
-@font-face {
-  font-family: 'BitcountPropSingle';
+@font-face { font-family: 'BitcountPropSingle';
   src: url('/fonts/BitcountPropSingle-Regular.woff2') format('woff2');
 }
-@font-face {
-  font-family: 'Audiowide';
+@font-face { font-family: 'Audiowide';
   src: url('/fonts/Audiowide-Regular.woff2') format('woff2');
 }
-@font-face {
-  font-family: 'Orbitron';
+@font-face { font-family: 'Orbitron';
   src: url('/fonts/Orbitron-Regular.woff2') format('woff2');
 }
-@font-face {
-  font-family: 'Orbitron';
+@font-face { font-family: 'Orbitron';
   src: url('/fonts/Orbitron-ExtraBold.woff2') format('woff2');
   font-weight: 800;
 }
-@font-face {
-  font-family: 'Michroma';
+@font-face { font-family: 'Michroma';
   src: url('/fonts/Michroma-Regular.woff2') format('woff2');
 }
 
-/* === Base Layer === */
 @layer base {
-  * {
-    @apply border-0;
-  }
+  * { @apply border-0; }
 
-  html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;}
 
-  body {
-    @apply bg-black text-white overflow-x-hidden;
-    font-family: 'InstrumentSans';
-    scrollbar-width: none;
-  }
+  body { @apply bg-black text-white overflow-x-hidden; font-family: 'InstrumentSans'; scrollbar-width: none; }
 
-  body::-webkit-scrollbar,
-  ::-webkit-scrollbar {
-    display: none;
-    width: 0;
-  }
+  body::-webkit-scrollbar, ::-webkit-scrollbar { display: none; width: 0; }
 
-  h1, h2, h3, h4 {
-    font-family: "Orbitron";
-  }
+  h1, h2, h3, h4 { font-family: "Orbitron";}
 }
 
 .font-pixel {
@@ -69,20 +44,13 @@
     0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-/* === Components Layer === */
 @layer components {
   .glass-effect {
-    @apply bg-white/5 backdrop-blur-md border-b border-white/10;
+    @apply bg-white/5 backdrop-blur-sm border-b border-white/10;
   }
 
   .gradient-text {
-    background: linear-gradient(
-      90deg,
-      oklch(74.6% 0.16 232.661),
-      oklch(71.4% 0.203 305.504),
-      oklch(71.2% 0.194 13.428),
-      oklch(74.6% 0.16 232.661)
-    );
+    background: linear-gradient( 90deg, oklch(74.6% 0.16 232.661), oklch(71.4% 0.203 305.504), oklch(71.2% 0.194 13.428), oklch(74.6% 0.16 232.661));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -90,20 +58,17 @@
     animation: shine 5.5s linear infinite;
   }
 
+  .label {
+    @apply block text-sm font-medium text-gray-300 mb-2
+  }
   .input {
     @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg
-      focus:outline-none focus:ring-2 focus:ring-violet-400/50
-      focus:border-transparent text-white placeholder-gray-400
+      focus:outline-none focus:ring-2 focus:ring-violet-400/50 focus:border-transparent text-white placeholder-gray-400
       transition-all;
   }
 
   .shiny-text {
-    background: linear-gradient(
-      90deg,
-      oklch(98.4% 0.003 247.858),
-      oklch(70.4% 0.04 256.788),
-      oklch(98.4% 0.003 247.858)
-    );
+    background: linear-gradient( 90deg, oklch(98.4% 0.003 247.858), oklch(70.4% 0.04 256.788), oklch(98.4% 0.003 247.858));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -113,7 +78,6 @@
   }
 }
 
-/* === Custom Effects & Animations === */
 .shine-border {
   background: linear-gradient(120deg, transparent, rgba(168, 85, 247, 0.8), transparent) no-repeat;
   background-size: 200% 200%;
@@ -128,85 +92,43 @@
   opacity: 0.7;
 }
 
-/* === Animations === */
 @keyframes shineSweep {
-  0% {
-    background-position: 200% 0%;
-  }
-  100% {
-    background-position: -200% 0%;
-  }
+  0% { background-position: 200% 0%; }
+  100% { background-position: -200% 0%; }
 }
 
 @keyframes shine {
-  0% {
-    background-position: 200% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
 }
 
 @keyframes gridMove {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 50px;
-  }
+  0% { background-position: 0 0; }
+  100% { background-position: 0 50px; }
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @theme inline {
   --animate-meteor: meteor 5s linear infinite;
  
   @keyframes meteor {
-    0% {
-      transform: rotate(var(--angle)) translateX(0);
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(var(--angle)) translateX(-500px);
-      opacity: 0;
-    }
+    0% { transform: rotate(var(--angle)) translateX(0); opacity: 1; }
+    70% { opacity: 1; }
+    100% { transform: rotate(var(--angle)) translateX(-500px); opacity: 0; }
   }
 }
 
-/* === Animate Classes === */
-.animate-gradient {
-  animation: gradient 8s linear infinite;
-  background-size: 200% 200%;
-}
-
-.animate-grid {
-  animation: gridMove 5s linear infinite;
-}
-
-.animate-tech-colors {
-  @apply translate-x-[-100%] group-hover/badge:translate-x-[100%] transition-transform;
-}
-
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out both;
-}
-
-
+.animate-gradient { animation: gradient 8s linear infinite; background-size: 200% 200%; }
+.animate-grid { animation: gridMove 5s linear infinite; }
+.animate-tech-colors { @apply translate-x-[-100%] group-hover/badge:translate-x-[100%] transition-transform; }
+.animate-fade-in { animation: fade-in 0.6s ease-out both; }

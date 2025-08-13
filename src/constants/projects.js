@@ -33,11 +33,11 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Pymoney",
+    title: "HelpDesk Management",
     description:
-      "This is my first CRUD Project use Machine learning programming language, it's Python with his hundred Libraries",
-    image: "/pymoney.webp",
-    technologies: ["MySQL", "Python"],
+      "This is my seccond Biggest Project using Nextjs for SEO, SSR & CSR Perform, React Typescript for specific error and safety typing",
+    image: "/lintasarta.webp",
+    technologies: ["MySQL", "Prisma", "Nextjs", "React", "Typescript", "Tailwindcss"],
   },
   {
     id: 6,

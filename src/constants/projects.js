@@ -33,7 +33,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "HelpDesk Management",
+    title: "Lintasarta HD&SM",
     description:
       "This is my seccond Biggest Project using Nextjs for SEO, SSR & CSR Perform, React Typescript for specific error and safety typing",
     image: "/lintasarta.webp",

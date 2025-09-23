@@ -10,10 +10,10 @@ export default function LinuxHeader() {
       <h1 className="font-pixel text-gray-500">ContactForm.jsx</h1>
 
       <div className="flex items-center space-x-2">
-        <span className="w-4 h-4 bg-green-400 rounded-full" />
-        <span className="w-4 h-4 bg-yellow-400 rounded-full" />
+        <span className="w-4 h-4 bg-green-500 rounded-full" />
+        <span className="w-4 h-4 bg-yellow-500 rounded-full" />
         
-        <button onClick={handleClose} className="w-4 h-4 bg-rose-400 rounded-full flex items-center justify-center text-[8px] text-rose-100 hover:bg-rose-500 transition-all" title="Close?">
+        <button onClick={handleClose} className="w-4 h-4 bg-red-500 rounded-full flex items-center justify-center text-[8px] text-rose-100 hover:bg-rose-500 transition-all" title="Close?">
           <span className='text-white font-semibold text-base'>×</span>
         </button>
       </div>

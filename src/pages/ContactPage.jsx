@@ -86,7 +86,7 @@ const ContactPage = () => {
                     <textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange} className="input" placeholder="You're free to say whatever you..."/>
                   </div>
 
-                  <button type="submit" disabled={isSubmitting} className="w-full bg-gray-500/20 hover:bg-gray-500/30 font-semibold py-4 px-6 rounded-lg transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                  <button type="submit" disabled={isSubmitting} className="w-full ring-1 ring-gray-400/40 inset-shadow-sm inset-shadow-gray-600 bg-radial from-gray-500/40 to-gray-500/20 hover:from-violet-500/40 hover:to-violet-500/20 hover:ring-violet-400/40 hover:inset-shadow-violet-600 font-semibold py-4 px-6 rounded-lg transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">
                     {isSubmitting ? (
                       <>
                         <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />

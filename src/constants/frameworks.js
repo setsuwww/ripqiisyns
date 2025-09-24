@@ -6,7 +6,7 @@ export const frameworks = [
     title: 'Nextjs',
     color: 'text-white',
     bg: 'bg-white/10',
-    border: '',
+    border: 'border-white/20',
     description:
       'A powerful React framework with CSR, SSR, ISR, SSG, API Routing and SEO Performance',
   },
@@ -15,7 +15,7 @@ export const frameworks = [
     title: 'Nuxtjs',
     color: 'text-emerald-300',
     bg: 'bg-emerald-500/10',
-    border: 'border-b-1 border-emerald-500/20',
+    border: 'border-emerald-500/20',
     description:
       'Vue-based framework with SSR and SSG same as Nextjs but Vue-based.',
   },
@@ -24,7 +24,7 @@ export const frameworks = [
     title: 'Laravel',
     color: 'text-red-300',
     bg: 'bg-red-500/20',
-    border: 'border-b-1 border-red-500/20',
+    border: 'border-red-500/20',
     description:
       'PHP Elegant backend framework with Blade, APIs, and Model, View, Controller Structure.',
   },

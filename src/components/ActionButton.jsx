@@ -9,7 +9,7 @@ export default function ActionButtons() {
         <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
       </Motion.a>
 
-      <Motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="group relative px-8 py-4 rounded-full text-violet-300 font-semibold border-1 border-b-2 border-violet-800 hover:border-violet-400 group overflow-hidden z-10 bg-gradient-to-b from-violet-100/0 via-violet-300/10 to-violet-500/20">
+      <Motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="group relative px-8 py-4 rounded-full text-violet-300 font-semibold border-1 border-b-2 border-violet-900 hover:border-violet-400 group overflow-hidden z-10 bg-gradient-to-b from-violet-100/0 via-violet-300/10 to-violet-500/20 hover:to-violet-500/40">
         <span className="relative z-10 flex items-center">
           <Mail className="group-hover:scale-125 transform transition-transform mr-2 w-5 h-5" />
           Get In Touch

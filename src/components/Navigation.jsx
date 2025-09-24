@@ -37,8 +37,7 @@ const Navigation = () => {
       <div className={clsx("max-w-7xl mx-auto transition-all duration-300", scrolled ? "p-2 lg:p-3" : "p-4 lg:p-7")}>
         <div className="flex justify-between items-center">
           <p className="font-pixel flex items-center space-x-3 font-bold">
-            <img src="/pp.webp" alt="" className="size-10 object-cover lg:size-12 rounded-full" />
-            <span className="text-md md:text-lg">
+            <span className="text-md md:text-lg tracking-wider">
               Rifqi<span className="gradient-text"> Synyster</span>
             </span>
           </p>

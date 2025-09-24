@@ -11,7 +11,7 @@ import TitleForm from "@/components/FormTitle"
 const AboutPage = () => {
   return (
     <>
-      <SEOHeader title="Rifqi Synyster" description="About Page references" url="https://ripqiisyns.vercel.app" image="/pp.jpg" />
+      <SEOHeader title="Rifqi Synyster" description="About Page references" url="https://ripsynss.vercel.app" image="/pp.webp" />
       <main className="w-full relative min-h-screen pt-20 pb-16">
 
         <BallsBackground />

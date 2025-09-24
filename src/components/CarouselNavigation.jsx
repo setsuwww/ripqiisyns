@@ -2,7 +2,7 @@ import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const CarouselNav = React.memo(function CarouselNav({ onPrev, onNext, current, total }) {
-  const baseClass = "absolute top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 z-10";
+  const baseClass = "absolute top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-xs border border-white/20 rounded-full p-3 z-10";
 
   return (
     <>

@@ -46,7 +46,7 @@
 
 @layer components {
   .glass-effect {
-    @apply bg-white/5 backdrop-blur-sm border-b border-white/10;
+    @apply bg-white/5 backdrop-blur-xs border-b border-white/10;
   }
 
   .gradient-text {

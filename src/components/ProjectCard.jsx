@@ -3,7 +3,7 @@ import { techColors } from "../constants/techColor"
 
 const ProjectCard = React.memo(function ProjectCard({ project, index, onClick }) {
   return (
-    <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-colors"
+    <div className="group relative bg-white/5 backdrop-blur-xs border border-white/10 rounded-2xl overflow-hidden transition-colors"
       data-aos="zoom-in"
     >
       <div className="relative overflow-hidden cursor-pointer" onClick={() => onClick(index)}>
@@ -22,7 +22,7 @@ const ProjectCard = React.memo(function ProjectCard({ project, index, onClick })
           <h4 className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Built with</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech, techIndex) => (
-              <div key={techIndex} className={`group/badge relative overflow-hidden px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-sm transition-all hover:scale-105
+              <div key={techIndex} className={`group/badge relative overflow-hidden px-3 py-1.5 text-xs font-medium rounded-full border backdrop-blur-xs transition-all hover:scale-105
                    ${techColors[tech] || "from-white/10 to-white/20 border-white/20 text-white"} bg-gradient-to-r cursor-pointer`}
               >
                 <span className="relative z-10">{tech}</span>

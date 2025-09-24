@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet";
 export default function SEOHeader({
   title = "Rifqi Synyster",
   description = "Rifqi Synyster's Portfolio",
-  url = "https://ripqiisyns.vercel.app",
-  image = "/pp.jpg",
+  url = "https://ripsynss.vercel.app",
+  image = "/pp.webp",
 }) {
   return (
     <Helmet>

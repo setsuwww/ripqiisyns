@@ -12,7 +12,7 @@ const description = "I create modern web applications, SEO friendly, semantic co
 const HomePage = () => {
   return (
     <>
-      <SEOHeader title="Rifqi Synyster" description={description} url="https://ripqiisyns.vercel.app" image="/pp.jpg"/>
+      <SEOHeader title="Rifqi Synyster" description={description} url="https://ripsynss.vercel.app" image="/pp.webp"/>
 
       <section className="w-full relative min-h-screen overflow-hidden">
         <Meteors number={10} />

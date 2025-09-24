@@ -10,7 +10,7 @@ const SkillsPage = () => {
 
   return (
     <>
-      <SEOHeader title="Rifqi Synyster" description="Skills Page references" url="https://ripsynss.vercel.app" image="/pp.webp"/>
+      <SEOHeader title="Ripsynss" description="Skills Page references" url="https://ripsynss.vercel.app" image="/pp.webp"/>
 
       <div className="w-full relative min-h-screen pt-20 pb-16">
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

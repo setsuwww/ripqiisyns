@@ -15,13 +15,13 @@ export default function PortfolioProjects() {
 
   const closeModal = useCallback(() => setIsOpen(false), [])
 
-  const next = useCallback(() => {
+  const next = () => {
     setCurrentIndex((prev) => (prev + 1) % projects.length)
-  }, [projects])
+  }
 
-  const prev = useCallback(() => {
+  const prev = () => {
     setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length)
-  }, [projects])
+  }
 
   return (
     <>

@@ -63,12 +63,13 @@
   }
   .input {
     @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg
-      focus:outline-none focus:ring-2 focus:ring-violet-400/50 focus:border-transparent text-white placeholder-gray-400
+      focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-transparent text-white placeholder-gray-400
+      focus:inset-shadow-xs focus:inset-shadow-violet-500/30
       transition-all;
   }
 
   .shiny-text {
-    background: linear-gradient( 90deg, oklch(98.4% 0.003 247.858), oklch(70.4% 0.04 256.788), oklch(98.4% 0.003 247.858));
+    background: linear-gradient(90deg, oklch(98.4% 0.003 247.858), oklch(70.4% 0.04 256.788), oklch(98.4% 0.003 247.858));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

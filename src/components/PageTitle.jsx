@@ -14,7 +14,7 @@ const TitleSection = ({ text, highlight, isHeading = false, description = ""}) =
       </h1>
 
       {description && (
-        <p className="h2-responsive text-gray-400 max-w-3xl mx-auto" data-aos="zoom-out">
+        <p className="h2-responsive text-gray-400 max-w-sm mx-auto" data-aos="zoom-out">
           {description}
         </p>
       )}

@@ -40,17 +40,17 @@ export default function LinuxHeader() {
   };
 
   return (
-    <div className="flex items-center justify-between py-3 px-6 md:px-8 border-b border-white/10 bg-white/5 rounded-t-2xl">
+    <div className="flex items-center justify-between py-2 px-6 md:px-8 border-b border-white/10 bg-white/5 rounded-t-2xl">
       <div className="flex items-center space-x-2">
         <button
           onClick={handleClose}
-          className="w-4 h-4 rounded-full bg-rose-500 hover:bg-rose-600 transition-all appearance-none border-0 p-0"
+          className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-rose-500 hover:bg-rose-700 transition-all appearance-none border-0 p-0"
           title="Close?"
         />
-        <span className="w-4 h-4 rounded-full bg-violet-500" />
-        <span className="w-4 h-4 rounded-full bg-sky-500" />
+        <span className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-violet-500 hover:bg-violet-700" />
+        <span className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-sky-500 hover:bg-sky-700" />
       </div>
-      <h1 className="text-gray-500">Contact-Me</h1>
+      <h1 className="text-sm md:text-base text-gray-500">Contact-Me</h1>
     </div>
   );
 }

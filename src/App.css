@@ -2,22 +2,28 @@
 
 @font-face { font-family: 'InstrumentSans';
   src: url('/fonts/InstrumentSans-Regular.woff2') format('woff2');
+  display: swap;
 }
 @font-face { font-family: 'BitcountPropSingle';
   src: url('/fonts/BitcountPropSingle-Regular.woff2') format('woff2');
+  display: swap;
 }
 @font-face { font-family: 'Audiowide';
   src: url('/fonts/Audiowide-Regular.woff2') format('woff2');
+  display: swap;
 }
 @font-face { font-family: 'Orbitron';
   src: url('/fonts/Orbitron-Regular.woff2') format('woff2');
+  display: swap;
 }
 @font-face { font-family: 'Orbitron';
   src: url('/fonts/Orbitron-ExtraBold.woff2') format('woff2');
+  display: swap;
   font-weight: 800;
 }
 @font-face { font-family: 'Michroma';
   src: url('/fonts/Michroma-Regular.woff2') format('woff2');
+  display: swap;
 }
 
 @layer base {

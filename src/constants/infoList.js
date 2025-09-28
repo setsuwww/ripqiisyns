@@ -4,7 +4,7 @@ export const infoList = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Kec. Tambun Selatan, Kabupaten Bekasi, Jawa Barat 17510',
+    value: 'Kec. Tambun Selatan, Kab. Bekasi, Jawa Barat 17510',
     color: 'text-sky-400 bg-sky-400/20 group-hover:bg-sky-600/20',
     colorHover: 'group-hover:text-sky-300 group-hover:drop-shadow-[0_0_4px_oklch(89.4%_0.058_230.902)] group-hover:scale-90 group-hover:stroke-1',
     animation: 'fade-down',

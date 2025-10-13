@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy } from 'react'
 
 import './App.css'
 
@@ -11,11 +11,9 @@ const SkillsPage = lazy(() => import('./pages/Skills.jsx'))
 const ContactPage = lazy(() => import('./pages/ContactPage.jsx'))
 
 import Footer from './components/Footer.jsx'
-import { SectionLoader } from './components/SectionLoader'
 
 const UserLayout = () => {
   return (
-    <Suspense fallback={<SectionLoader />}>
       <div className="overflow-x-hidden">
         <Navigation />
 
@@ -41,7 +39,6 @@ const UserLayout = () => {
 
         <Footer />
       </div>
-    </Suspense>
   )
 }
 export default UserLayout

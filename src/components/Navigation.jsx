@@ -34,7 +34,7 @@ const Navigation = () => {
 
   return (
     <nav className={clsx("w-full fixed top-0 z-50 transition-all duration-300", scrolled ? "glass-effect shadow-lg" : "bg-transparent")} data-aos="fade-down">
-      <div className={clsx("max-w-7xl mx-auto transition-all duration-300", scrolled ? "p-3  lg:p-3" : "p-4 lg:p-7")}>
+      <div className={clsx("max-w-7xl mx-auto transition-all duration-300", scrolled ? "p-3 px-6  lg:p-5" : "p-4 lg:p-7")}>
         <div className="flex justify-between items-center">
           <p className="font-pixel flex items-center space-x-3 font-bold">
             <span className="text-md md:text-lg tracking-wider">

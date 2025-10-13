@@ -44,7 +44,7 @@ const AboutPage = () => {
                       <p className="flex items-center space-x-2 text-violet-500 text-xs md:text-sm font-medium" data-aos="fade-right" data-aos-duration={800 + index * 100}>
                         <GraduationCap className="w-4 h-4"/> <span>{exp.company}</span>
                       </p>
-                      <p className="text-gray-400 mb-2 text-xs md:sm">
+                      <p className="text-gray-400 mt-1 mb-2 text-xs md:sm">
                         {exp.period}
                       </p>
                       <p className="text-gray-300 text-xs md:text-sm">

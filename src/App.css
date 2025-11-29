@@ -68,7 +68,7 @@
     @apply block text-sm font-medium text-gray-300 mb-2
   }
   .input {
-    @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg
+    @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg outline-offset-4 outline-1 outline-slate-500/10
       focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-transparent text-white placeholder-gray-400
       focus:inset-shadow-xs focus:inset-shadow-violet-500/30
       transition-all;

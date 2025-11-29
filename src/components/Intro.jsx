@@ -5,7 +5,7 @@ export default function IntroWrapper({ children }) {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowIntro(false), 2000); // durasi splash 3s
+    const timer = setTimeout(() => setShowIntro(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -19,12 +19,10 @@ export default function IntroWrapper({ children }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, y: -200 }}
             transition={{ duration: 1 }}
-            className="fixed inset-0 flex items-center justify-center bg-black z-50"
+            className="fixed inset-0 flex items-center justify-center bg-black z-50 lg:p-0 p-8"
           >
-            {/* Container horizontal: logo kiri, teks kanan */}
             <div className="flex flex-row items-center gap-12">
 
-              {/* Tulisan utama dan deskripsi di kanan */}
               <div className="flex flex-col text-left">
                 <motion.h1
                   initial={{ y: 100, opacity: 0 }}
@@ -33,7 +31,7 @@ export default function IntroWrapper({ children }) {
                   transition={{ duration: 1 }}
                   className="text-6xl font-bold gradient-text"
                 >
-                  Yoo!
+                  Sheeshh!
                 </motion.h1>
 
                 <motion.p

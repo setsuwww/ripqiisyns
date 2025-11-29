@@ -15,9 +15,9 @@ export default function LinuxHeader() {
       html: (
         <div className="flex flex-col rounded-xl overflow-hidden bg-zinc-900 text-white shadow-2xl border border-zinc-700">
           <div className="flex items-center space-x-2 px-4 py-3 bg-zinc-800 border-b border-zinc-700">
-            <button id="mac-close" className="w-3 h-3 rounded-full bg-rose-500 hover:bg-rose-600"/>
-            <span className="w-3 h-3 rounded-full bg-violet-400 hover:bg-violet-500" />
-            <span className="w-3 h-3 rounded-full bg-sky-500 hover:bg-sky-600" />
+            <button id="mac-close" className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600"/>
+            <span className="w-3 h-3 rounded-full bg-yellow-400 hover:bg-yellow-500" />
+            <span className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600" />
           </div>
           <div className="p-8 text-center">
             <div className="bg-gradient-to-br from-rose-500/10 to-rose-500/30 border border-pink-700 rounded-md w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -40,15 +40,15 @@ export default function LinuxHeader() {
   };
 
   return (
-    <div className="flex items-center justify-between py-2 px-6 md:px-8 border-b border-white/10 bg-white/5 rounded-t-2xl">
+    <div className="flex items-center justify-between py-1.5 px-6 md:px-5 border-b border-white/10 bg-white/5 rounded-t-2xl">
       <div className="flex items-center space-x-2">
         <button
           onClick={handleClose}
-          className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-rose-500 hover:bg-rose-700 transition-all appearance-none border-0 p-0"
+          className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-red-500 hover:bg-red-700 border border-red-700/70 transition-all appearance-none p-0"
           title="Close?"
         />
-        <span className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-violet-500 hover:bg-violet-700" />
-        <span className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-sky-500 hover:bg-sky-700" />
+        <span className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-yellow-500 hover:bg-yellow-700 border border-yellow-700/70" />
+        <span className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-green-500 hover:bg-green-700 border border-green-700/70" />
       </div>
       <h1 className="text-sm md:text-base text-gray-500">Contact-Me</h1>
     </div>

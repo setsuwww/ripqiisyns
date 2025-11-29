@@ -9,11 +9,11 @@ import './App.css'
 import App from './App.jsx'
 
 AOS.init({
-  duration: 600,   // default durasi animasi (ms)
-  once: true,      // animasi cuma jalan sekali
-  offset: 120,     // jarak scroll sebelum animasi mulai
+  duration: 600,
+  once: true,
+  offset: 120,
   easing: "ease-in-out", 
-  mirror: false,   // ga diulang pas scroll ke atas
+  mirror: false,
 });
 
 createRoot(document.getElementById('root')).render(

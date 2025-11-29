@@ -46,7 +46,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className={clsx("flex items-center tracking-wide rounded-lg transition-all duration-300",
                 activeSection === item.href.slice(1)
-                  ? "text-sky-400 font-semibold bg-sky-500/10 px-4 py-1"
+                  ? "text-sky-400 font-semibold bg-radial from-sky-500/15 to-transparent px-4 py-1"
                   : "text-gray-500 hover:text-gray-300"
               )}>
                 <span>{item.label}</span>

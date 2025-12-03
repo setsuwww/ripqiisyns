@@ -61,7 +61,7 @@ const ContactPage = () => {
 
         <section className="relative px-2 sm:px-6 md:px-12 lg:px-24 py-10 sm:py-12">
           <div className="grid gap-10 lg:gap-12">
-            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl overflow-hidden">
 
               <LinuxHeader />
 

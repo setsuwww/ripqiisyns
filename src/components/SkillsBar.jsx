@@ -9,7 +9,7 @@ const SkillBar = ({ name, nameSingkat, level, color }) => {
         <span className="text-sm font-medium text-gray-400">{level}%</span>
       </div>
 
-      <div className="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
+      <div className="w-full bg-gray-800 rounded-xs h-[3px] overflow-hidden">
         <div className={`h-full bg-gradient-to-r ${color} rounded-full`} style={{ width: `${level}%`}}/>
       </div>
     </div>

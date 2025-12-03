@@ -21,7 +21,7 @@ export default function IntroWrapper({ children }) {
             transition={{ duration: 1 }}
             className="fixed inset-0 flex items-center justify-center bg-black z-50 lg:p-0 p-8"
           >
-            <div className="flex flex-row items-center gap-12">
+            <div className="ring ring-sky-500/10 border-0 border-t-2 border-sky-500/20 rounded-xl p-8 flex flex-row items-center gap-12">
 
               <div className="flex flex-col text-left">
                 <motion.h1
@@ -29,7 +29,7 @@ export default function IntroWrapper({ children }) {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -200, opacity: 0 }}
                   transition={{ duration: 1 }}
-                  className="text-6xl font-bold gradient-text"
+                  className="text-4xl font-bold gradient-text"
                 >
                   Sheeshh!
                 </motion.h1>
@@ -39,9 +39,9 @@ export default function IntroWrapper({ children }) {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -100, opacity: 0 }}
                   transition={{ duration: 1, delay: 0.3 }}
-                  className="mt-4 text-lg text-gray-300 max-w-md"
+                  className="mt-4 text-lg text-gray-300 max-w-sm"
                 >
-                  Welcome to my Portfolio! feel the essence of elegance.
+                  Welcome to my Portfolio! feel the Essence & Art of Elegance.
                 </motion.p>
               </div>
             </div>

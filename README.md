@@ -23,7 +23,8 @@ add more your specifik meta tag SEO support in components who call "SEOHeader.js
   <SEOHeader title="your_title" description="your_description" />
 ```
 
-add more component from magicui & reactbits
+make your portfolio is more beautyfull than mine with add more interactive components from
+**Reactbits & Magicui**
 
 constants folders for your information
 public for your assets / image

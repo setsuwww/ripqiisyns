@@ -1,5 +1,7 @@
 # Ripsynss
 
+The result "https://ripsynss.vercel.app"
+
 Documentation
 
 ```powershell
@@ -26,5 +28,7 @@ add more your specifik meta tag SEO support in components who call "SEOHeader.js
 make your portfolio is more beautyfull than mine with add more interactive components from
 **Reactbits & Magicui**
 
+```powershell
 constants folders for your information
 public for your assets / image
+```

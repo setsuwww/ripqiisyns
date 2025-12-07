@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from "react"
-import { projects as rawProjects } from "../constants/projects"
+import { projects as rawProjects } from "../../../constants/projects"
 import ProjectCard from "./ProjectCard"
 
 export default function PortfolioProjects() {

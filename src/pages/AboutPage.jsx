@@ -1,14 +1,14 @@
 import { GraduationCap } from "lucide-react"
 
-import BallsBackground from "../components/SoftGradients"
-import AboutMe from "../components/AboutMe"
-import AboutPersonal from "../components/PersonalInfo"
-import TitleSection from "../components/PageTitle"
+import BallsBackground from "../components/common/SoftGradients"
+import AboutMe from "../components/content/About/AboutMe"
+import AboutPersonal from "../components/content/About/PersonalInfo"
+import TitleSection from "../components/common/PageTitle"
 
 import { experiences } from "../constants/experiences"
 
 import SEOHeader from "../components/SEO/SEOHeader"
-import TitleForm from "@/components/FormTitle"
+import TitleForm from "@/components/common/FormTitle"
 
 const AboutPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { techColors } from "../constants/techColor";
+import { techColors } from "../../../constants/techColor";
 
 const CarouselCard = React.memo(function CarouselCard({ project, onClick }) {
   return (

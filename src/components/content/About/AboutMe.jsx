@@ -1,5 +1,5 @@
 import { memo } from "react"
-import TitleForm from "./FormTitle"
+import TitleForm from "../../common/FormTitle"
 import { aboutParagraphs } from "@/constants/aboutParagraphs"
 
 function AboutSectionComponent() {

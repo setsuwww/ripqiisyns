@@ -3,11 +3,11 @@ import { useRef, useState } from "react";
 import { Send } from "lucide-react"
 import Swal from "sweetalert2";
 
-import BallsBackground from "../components/SoftGradients";
-import GridBackground from "../components/GridBackground";
-import TitleForm from "../components/FormTitle";
-import LinuxHeader from "../components/LinuxHeader";
-import TitleSection from "../components/PageTitle"
+import BallsBackground from "../components/common/SoftGradients";
+import GridBackground from "../components/common/GridBackground";
+import TitleForm from "../components/common/FormTitle";
+import LinuxHeader from "../components/content/Contact/LinuxHeader";
+import TitleSection from "../components/common/PageTitle"
 
 import SEOHeader from "@/components/SEO/SEOHeader";
 

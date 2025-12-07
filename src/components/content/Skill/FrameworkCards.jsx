@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import { frameworks } from "../constants/frameworks"
+import { frameworks } from "../../../constants/frameworks"
 
 const FrameworkGrid = () => {
   const renderedFrameworks = useMemo(

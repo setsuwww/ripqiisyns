@@ -1,5 +1,5 @@
 import React from "react"
-import { techColors } from "../constants/techColor"
+import { techColors } from "../../../constants/techColor"
 
 const ProjectCard = React.memo(function ProjectCard({ project, index, onClick }) {
   return (

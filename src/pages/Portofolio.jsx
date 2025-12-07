@@ -1,11 +1,11 @@
 import { useState, useCallback } from "react"
-import GridBackground from "../components/GridBackground"
-import BallsBackground from "../components/SoftGradients"
-import PortfolioProjects from "../components/MyProject"
-import TitleSection from "../components/PageTitle"
-import CarouselCard from "../components/MobileMyProject"
-import ModalViewer from "../components/MobileModal"
-import CarouselNav from "../components/CarouselNavigation"
+import GridBackground from "../components/common/GridBackground"
+import BallsBackground from "../components/common/SoftGradients"
+import PortfolioProjects from "../components/content/Portfolio/MyProject"
+import TitleSection from "../components/common/PageTitle"
+import CarouselCard from "../components/content/Portfolio/MobileMyProject"
+import ModalViewer from "../components/content/Portfolio/MobileModal"
+import CarouselNav from "../components/content/Portfolio/CarouselNavigation"
 
 import { projects } from "../constants/projects"
 

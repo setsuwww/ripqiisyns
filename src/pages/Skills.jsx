@@ -1,9 +1,9 @@
 import { useMemo } from "react"
 import { skills } from "../constants/skills"
-import FrameworkGrid from "../components/FrameworkCards"
-import TitleSection from "../components/PageTitle"
+import FrameworkGrid from "../components/content/Skill/FrameworkCards"
+import TitleSection from "../components/common/PageTitle"
 import SEOHeader from "../components/SEO/SEOHeader"
-import SkillBar from "../components/SkillsBar"
+import SkillBar from "../components/content/Skill/SkillsBar"
 
 const SkillsPage = () => {
   const memoSkills = useMemo(() => skills, [])
